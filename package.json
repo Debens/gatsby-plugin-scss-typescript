@@ -16,8 +16,7 @@
     ],
     "scripts": {
         "compile": "tsc",
-        "compile:watch": "yarn compile -w",
-        "npmrc:create": "echo \"username=$NPM_USERNAME\n_password=$NPM_PASSWORD\nemail=\"$NPM_EMAIL\"\nalways-auth=true\" > .npmrc"
+        "compile:watch": "yarn compile -w"
     },
     "peerDependencies": {
         "gatsby": ">=1",
