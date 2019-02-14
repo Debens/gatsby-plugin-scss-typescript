@@ -45,6 +45,6 @@ workflows:
         jobs:
             - build
             - publish:
-                  type: 'approval'
+                  type: approval
                   requires:
                       - build
