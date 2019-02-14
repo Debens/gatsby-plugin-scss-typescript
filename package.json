@@ -1,0 +1,36 @@
+{
+    "name": "gatsby-plugin-scss-typescript",
+    "version": "1.0.0",
+    "author": "Andrew Debens",
+    "description": "GatsbyJS plugin for using SCSS Modules and generating Typescript declaration files",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/debens/gatsby-plugin-scss-typescript"
+    },
+    "license": "MIT",
+    "main": "index.js",
+    "keywords": [
+        "gatsby",
+        "scss",
+        "typescript"
+    ],
+    "scripts": {
+        "compile": "tsc",
+        "compile:watch": "yarn compile -w"
+    },
+    "peerDependencies": {
+        "gatsby": ">=1",
+        "webpack": "^4.0.0"
+    },
+    "dependencies": {
+        "css-loader": "~0.26.1",
+        "node-sass": "^4.5.0",
+        "resolve-url-loader": "^3.0.0",
+        "sass-loader": "^7.1.0",
+        "style-loader": "^0.23.1",
+        "typings-for-css-modules-loader": "^1.7.0"
+    },
+    "devDependencies": {
+        "typescript": "^3.3.3"
+    }
+}
