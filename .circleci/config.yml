@@ -9,8 +9,6 @@ jobs:
             - image: circleci/node:8
         steps:
             - checkout
-            - attach_workspace:
-                  at: ~/repo
             # Download and cache dependencies
             - restore_cache:
                   key: v1-dependencies-{{ checksum "package.json" }}
@@ -24,7 +22,7 @@ jobs:
                   command: yarn compile
             - run:
                   name: Authenticate
-                  command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
+                  command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
             - run:
                   name: Publish
                   command: npm publish

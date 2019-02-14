@@ -1,9 +1,12 @@
 src/
 
+.circleci/
 .gitignore
 
-yarn-lock.json
+yarn.lock
 
 .prettierrc
 tsconfig.json
 tslint.json
+
+.npmrc

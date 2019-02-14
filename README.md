@@ -1,4 +1,4 @@
-# gatsby-plugin-scss-typescript &middot; ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
+# gatsby-plugin-scss-typescript &middot; ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg) [![CircleCI](https://circleci.com/gh/Debens/gatsby-plugin-scss-typescript.svg?style=shield&circle-token=7c3628b63d364d30fbce8a04d6d6df3de8667bbb)](https://circleci.com/gh/Debens/gatsby-plugin-scss-typescript)
 
 Includes Gatsby V2 webpack support for SCSS stylesheets modules and generation of accompanying typings.
 

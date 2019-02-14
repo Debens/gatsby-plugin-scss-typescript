@@ -3,3 +3,5 @@ node_modules/
 gatsby-node.js
 defaults.js
 resolve.js
+
+.npmrc
