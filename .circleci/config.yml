@@ -44,7 +44,10 @@ workflows:
     default:
         jobs:
             - build
-            - publish:
+            - publish_approval:
                   type: approval
                   requires:
                       - build
+            - publish:
+                  requires:
+                      - publish_approval
