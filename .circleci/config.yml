@@ -4,7 +4,7 @@
 #
 version: 2
 jobs:
-    publish:
+    build:
         docker:
             - image: circleci/node:8
         steps:
@@ -20,9 +20,18 @@ jobs:
             - run:
                   name: Build
                   command: yarn compile
+            - persist_to_workspace:
+                  root: ~/repo
+                  paths: .
+    publish:
+        docker:
+            - image: circleci/node:8
+        steps:
+            - attach_workspace:
+                  at: ~/repo
             - run:
                   name: Authenticate
-                  command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
+                  command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
             - run:
                   name: Publish
                   command: npm publish
@@ -30,4 +39,8 @@ workflows:
     version: 2
     default:
         jobs:
+            - build
             - publish
+                  type: approval
+                  requires:
+                    - build
