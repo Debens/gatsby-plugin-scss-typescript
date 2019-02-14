@@ -40,7 +40,7 @@ workflows:
     default:
         jobs:
             - build
-            - publish
-                  type: approval
+            - publish:
+                  type: 'approval'
                   requires:
-                    - build
+                      - build
