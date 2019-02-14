@@ -1,0 +1,33 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+jobs:
+    publish:
+        docker:
+            - image: circleci/node:8
+        steps:
+            - checkout
+            # Download and cache dependencies
+            - restore_cache:
+                  key: v1-dependencies-{{ checksum "package.json" }}
+            - run: yarn install
+            - save_cache:
+                  key: v1-dependencies-{{ checksum "package.json" }}
+                  paths:
+                      - node_modules
+            - run:
+                  name: Build
+                  command: yarn compile
+            - run:
+                  name: Authenticate
+                  command: yarn npmrc:create
+            - run:
+                  name: Publish
+                  command: npm publish
+workflows:
+    version: 2
+    default:
+        jobs:
+            - publish
