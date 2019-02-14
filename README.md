@@ -25,7 +25,7 @@ for all available options.
 // in gatsby-config.js
 plugins: [
     {
-        resolve: 'gatsby-plugin-typescript-scss-modules',
+        resolve: 'gatsby-plugin-scss-typescript',
         options: {
             importLoaders: 1,
             localIdentName: '[local]___[hash:base64:5]_[emoji:1]',
