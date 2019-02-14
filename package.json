@@ -17,7 +17,7 @@
     "scripts": {
         "compile": "tsc",
         "compile:watch": "yarn compile -w",
-        "npmrc:create": "echo \"username=$NPM_USERNAME\n_password=$NPM_PASSWORD\nemail = \"$NPM_EMAIL\"\nalways-auth=true\" > .npmrc"
+        "npmrc:create": "echo \"username=$NPM_USERNAME\n_password=$NPM_PASSWORD\nemail=\"$NPM_EMAIL\"\nalways-auth=true\" > .npmrc"
     },
     "peerDependencies": {
         "gatsby": ">=1",
@@ -32,6 +32,7 @@
         "typings-for-css-modules-loader": "^1.7.0"
     },
     "devDependencies": {
+        "@types/webpack": "^4.4.24",
         "typescript": "^3.3.3"
     }
 }
