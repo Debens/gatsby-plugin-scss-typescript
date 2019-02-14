@@ -1,4 +1,4 @@
-# Homestock &middot; ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
+# gatsby-plugin-scss-typescript &middot; ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 Includes Gatsby V2 webpack support for SCSS stylesheets modules and generation of accompanying typings.
 
