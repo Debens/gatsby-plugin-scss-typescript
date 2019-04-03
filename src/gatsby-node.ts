@@ -1,29 +1,39 @@
 import { defaults } from './defaults';
 import resolve from './resolve';
 
-const createLoaders = (useModules: boolean, options: any, isProduction: boolean) => [
-    {
-        loader: resolve('style-loader'), // creates style nodes from JS strings
-    },
-    {
-        loader: useModules
-            ? resolve('typings-for-css-modules-loader')
-            : resolve('css-loader'), // loads css
-        options: {
-            ...defaults(useModules),
-            ...options,
+const createLoaders = (useModules: boolean, options: any, isProduction: boolean) => {
+    const { cssLoaderOptions, sassLoaderOptions, ...rest } = options;
+    return [
+        {
+            loader: resolve('style-loader'), // creates style nodes from JS strings
         },
-    },
-    {
-        loader: resolve('resolve-url-loader'),
-    },
-    {
-        loader: resolve('sass-loader'), // compiles Sass to CSS
-        options: {
-            sourceMap: !isProduction,
+        useModules
+            ? {
+                  loader: resolve('typings-for-css-modules-loader'),
+                  options: {
+                      ...defaults(true),
+                      ...rest,
+                  },
+              }
+            : {
+                  loader: resolve('css-loader'), // loads css
+                  options: {
+                      ...defaults(false),
+                      ...cssLoaderOptions,
+                  },
+              },
+        {
+            loader: resolve('resolve-url-loader'),
         },
-    },
-];
+        {
+            loader: resolve('sass-loader'), // compiles Sass to CSS
+            options: {
+                sourceMap: !isProduction,
+                ...sassLoaderOptions,
+            },
+        },
+    ];
+};
 
 export const onCreateWebpackConfig = ({ stage, actions }, options) => {
     const { setWebpackConfig } = actions;
