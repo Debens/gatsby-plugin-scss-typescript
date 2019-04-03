@@ -30,7 +30,25 @@ plugins: [
         resolve: 'gatsby-plugin-scss-typescript',
         options: {
             importLoaders: 1,
-            localIdentName: '[local]___[hash:base64:5]_[emoji:1]',
+            localIdentName: '[name]_[local]___[hash:base64:5]_[emoji:1]',
+        },
+    },
+];
+```
+
+### Loader Options
+
+Use the keys `cssLoaderOptions` & `sassLoaderOptions` to pass options to the `css-loader` and `sass-loader` respectively.
+
+```javascript
+// in gatsby-config.js
+plugins: [
+    {
+        resolve: 'gatsby-plugin-scss-typescript',
+        options: {
+            sassLoaderOptions: {
+                includePaths: [path.resolve(__dirname, './src/styles/scss')],
+            },
         },
     },
 ];
