@@ -9,12 +9,14 @@ Includes Gatsby V2 webpack support for SCSS stylesheets modules and generation o
 ## Usage
 
 1.  Include the plugin in your `gatsby-config.js` file.
-2.  Write your SCSS and require or import them as normal.
+2.  Write your SCSS and import them as normal.
 
 ```javascript
 // in gatsby-config.js
 plugins: ['gatsby-plugin-scss-typescript'];
 ```
+
+Only files that include the `.module.scss` extensions shall be treated as module files, and hence have typings generated. `.scss` files shall be loaded using the regular [css-loader](https://github.com/webpack-contrib/css-loader).
 
 ## Options
 
