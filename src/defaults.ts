@@ -1,8 +1,18 @@
-export const defaults = {
-    camelCase: true,
-    namedExport: true,
+const defaultOptions = {
     modules: true,
-    localIdentName: '[local]__[hash:base64:5]',
 };
 
-export default defaults;
+const getDefaultModuleOptions = (useModules: boolean) => {
+    return useModules
+        ? {
+              camelCase: true,
+              namedExport: true,
+              localIdentName: '[local]__[hash:base64:5]',
+          }
+        : {};
+};
+
+export const defaults = (useModules: boolean) => ({
+    ...defaultOptions,
+    ...getDefaultModuleOptions(useModules),
+});
