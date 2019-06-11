@@ -24,7 +24,7 @@ jobs:
                       - node_modules
             - run:
                   name: Build
-                  command: yarn compile
+                  command: yarn build
             - persist_to_workspace:
                   root: ~/repo
                   paths: .

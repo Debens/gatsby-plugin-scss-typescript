@@ -35,14 +35,18 @@ plugins: [
     {
         resolve: 'gatsby-plugin-scss-typescript',
         options: {
-            importLoaders: 1,
-            localIdentName: '[name]_[local]___[hash:base64:5]_[emoji:1]',
+            cssLoaderOptions: {
+                importLoaders: 1,
+                localIdentName: '[name]_[local]___[hash:base64:5]_[emoji:1]',
+            },
         },
     },
 ];
 ```
 
 ### Loader Options
+
+The default gatsby loaders are used where possible, see the [gatsby webpack utils](https://github.com/gatsbyjs/gatsby/blob/0deda7b5646b3eb8db1b1873faf13553311c4878/packages/gatsby/src/utils/webpack-utils.js) for more info.
 
 Use the keys `cssLoaderOptions` & `sassLoaderOptions` to pass options to the `css-loader` and `sass-loader` respectively.
 
@@ -52,6 +56,10 @@ plugins: [
     {
         resolve: 'gatsby-plugin-scss-typescript',
         options: {
+            cssLoaderOptions: {
+                importLoaders: 1,
+                localIdentName: '[name]_[local]___[hash:base64:5]_[emoji:1]',
+            },
             sassLoaderOptions: {
                 includePaths: [path.resolve(__dirname, './src/styles/scss')],
             },
@@ -59,3 +67,7 @@ plugins: [
     },
 ];
 ```
+
+### Style Options
+
+Use the keys `styleLoaderOptions` & `stylePluginOptions` to pass options to the `style-loader` and the `MiniCssExtractPlugin`.
