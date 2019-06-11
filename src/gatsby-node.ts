@@ -1,10 +1,5 @@
 import { RuleSetRule, Plugin } from 'webpack';
 
-const createLoaders = (
-    sassLoader: RuleSetRule,
-    cssLoaders: RuleSetRule[],
-): RuleSetRule[] => [...cssLoaders, { loader: 'resolve-url-loader' }, sassLoader];
-
 export const onCreateWebpackConfig = ({ stage, loaders, plugins, actions }, options) => {
     const { setWebpackConfig } = actions;
     const isProduction = !stage.includes('develop');
@@ -19,6 +14,7 @@ export const onCreateWebpackConfig = ({ stage, loaders, plugins, actions }, opti
     const stylePlugin: Plugin = plugins.extractText(stylePluginOptions);
     const styleLoader: RuleSetRule = loaders.miniCssExtract(styleLoaderOptions);
 
+    const cssLoader: RuleSetRule = loaders.css(cssLoaderOptions);
     const cssModuleLoader: RuleSetRule = {
         loader: 'typings-for-css-modules-loader',
         options: {
@@ -52,17 +48,21 @@ export const onCreateWebpackConfig = ({ stage, loaders, plugins, actions }, opti
                             oneOf: [
                                 {
                                     test: /\.module\.s(a|c)ss$/,
-                                    use: createLoaders(sassLoader, [
+                                    use: [
                                         styleLoader,
                                         cssModuleLoader,
-                                    ]),
+                                        { loader: 'resolve-url-loader' },
+                                        sassLoader,
+                                    ],
                                 },
                                 {
                                     test: /\.s(a|c)ss$/,
-                                    use: createLoaders(sassLoader, [
+                                    use: [
                                         styleLoader,
-                                        loaders.css(cssLoaderOptions),
-                                    ]),
+                                        cssLoader,
+                                        { loader: 'resolve-url-loader' },
+                                        sassLoader,
+                                    ],
                                 },
                             ],
                         },
