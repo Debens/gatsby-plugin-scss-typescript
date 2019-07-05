@@ -8,12 +8,14 @@ export const onCreateWebpackConfig = ({ stage, loaders, plugins, actions }, opti
         stylePluginOptions,
         styleLoaderOptions,
         cssLoaderOptions,
+        postCssLoaderOptions,
         sassLoaderOptions,
     } = options;
 
     const stylePlugin: Plugin = plugins.extractText(stylePluginOptions);
     const styleLoader: RuleSetRule = loaders.miniCssExtract(styleLoaderOptions);
 
+    const postCssLoader = loaders.postcss(postCssLoaderOptions);
     const cssLoader: RuleSetRule = loaders.css(cssLoaderOptions);
     const cssModuleLoader: RuleSetRule = {
         loader: 'typings-for-css-modules-loader',
@@ -51,6 +53,7 @@ export const onCreateWebpackConfig = ({ stage, loaders, plugins, actions }, opti
                                     use: [
                                         styleLoader,
                                         cssModuleLoader,
+                                        postCssLoader,
                                         { loader: 'resolve-url-loader' },
                                         sassLoader,
                                     ],
@@ -60,6 +63,7 @@ export const onCreateWebpackConfig = ({ stage, loaders, plugins, actions }, opti
                                     use: [
                                         styleLoader,
                                         cssLoader,
+                                        postCssLoader,
                                         { loader: 'resolve-url-loader' },
                                         sassLoader,
                                     ],
