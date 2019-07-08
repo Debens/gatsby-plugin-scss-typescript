@@ -1,72 +1,71 @@
-import { RuleSetRule, Plugin } from 'webpack';
+import { RuleSetLoader } from 'webpack';
 
-export const onCreateWebpackConfig = ({ stage, loaders, plugins, actions }, options) => {
+export const onCreateWebpackConfig = ({ stage, plugins, rules, actions }, options) => {
     const { setWebpackConfig } = actions;
     const isProduction = !stage.includes('develop');
 
     const {
         stylePluginOptions,
-        styleLoaderOptions,
+        cssExtractOptions,
         cssLoaderOptions,
-        postCssLoaderOptions,
         sassLoaderOptions,
     } = options;
 
-    const stylePlugin: Plugin = plugins.extractText(stylePluginOptions);
-    const styleLoader: RuleSetRule = loaders.miniCssExtract(styleLoaderOptions);
+    const useCss: RuleSetLoader[] = rules.css(cssLoaderOptions).use;
+    const useCssModules: RuleSetLoader[] = rules.cssModules({
+        camelCase: true,
+        namedExport: true,
+        ...cssLoaderOptions,
+    }).use;
 
-    const postCssLoader = loaders.postcss(postCssLoaderOptions);
-    const cssLoader: RuleSetRule = loaders.css(cssLoaderOptions);
-    const cssModuleLoader: RuleSetRule = {
-        loader: 'typings-for-css-modules-loader',
-        options: {
-            modules: true,
-            camelCase: true,
-            namedExport: true,
-            localIdentName: '[local]__[hash:base64:5]',
-            ...cssLoaderOptions,
-        },
-    };
+    useCssModules.map(loader => {
+        ['/css-loader/locals', '/css-loader/'].forEach(modulePath => {
+            if (loader.loader.includes(modulePath)) {
+                loader.loader = require.resolve('typings-for-css-modules-loader');
+            }
+        });
 
-    const sassLoader: RuleSetRule = {
-        loader: 'sass-loader',
-        options: {
-            sourceMap: !isProduction,
-            ...sassLoaderOptions,
+        return loader;
+    });
+
+    const sassLoaders: RuleSetLoader[] = [
+        { loader: 'resolve-url-loader' },
+        {
+            loader: 'sass-loader',
+            options: {
+                sourceMap: !isProduction,
+                ...sassLoaderOptions,
+            },
         },
-    };
+    ];
+
+    useCss.push(...sassLoaders);
+    useCssModules.push(...sassLoaders);
 
     switch (stage) {
         case 'develop':
-        case 'develop-html':
-        case 'build-css':
+        case 'build-javascript':
         case 'build-html':
-        case 'build-javascript': {
+        case 'develop-html': {
             setWebpackConfig({
-                plugins: [stylePlugin],
+                optimization: {
+                    minimizer: [plugins.minifyCss()],
+                },
+                plugins: [
+                    plugins.extractText(cssExtractOptions),
+                    plugins.extractText(stylePluginOptions),
+                ],
                 module: {
                     rules: [
                         {
                             oneOf: [
                                 {
                                     test: /\.module\.s(a|c)ss$/,
-                                    use: [
-                                        styleLoader,
-                                        cssModuleLoader,
-                                        postCssLoader,
-                                        { loader: 'resolve-url-loader' },
-                                        sassLoader,
-                                    ],
+                                    use: useCssModules,
                                 },
                                 {
                                     test: /\.s(a|c)ss$/,
-                                    use: [
-                                        styleLoader,
-                                        cssLoader,
-                                        postCssLoader,
-                                        { loader: 'resolve-url-loader' },
-                                        sassLoader,
-                                    ],
+                                    use: useCss,
                                 },
                             ],
                         },
