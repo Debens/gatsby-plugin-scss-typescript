@@ -21,10 +21,10 @@
         "build:watch": "yarn build -w"
     },
     "peerDependencies": {
-        "gatsby": "^2.1.0"
+        "gatsby": "^2.1.0",
+        "node-sass": "^4.5.0"
     },
     "dependencies": {
-        "node-sass": "^4.5.0",
         "resolve-url-loader": "^3.0.0",
         "sass-loader": "^7.1.0",
         "typings-for-css-modules-loader": "^1.7.0"

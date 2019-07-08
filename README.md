@@ -6,6 +6,12 @@ Includes Gatsby V2 webpack support for SCSS stylesheets modules and automatic ge
 
 `yarn add gatsby-plugin-scss-typescript`
 
+AND
+
+`yarn add node-sass`
+
+From v4.0.0, node-sass has been moved to a peer dependency.
+
 ## Usage
 
 1.  Include the plugin in your `gatsby-config.js` file.
