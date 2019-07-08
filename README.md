@@ -70,4 +70,4 @@ plugins: [
 
 ### Style Options
 
-Use the keys `styleLoaderOptions` & `stylePluginOptions` to pass options to the `style-loader` and the `MiniCssExtractPlugin`.
+Use the key `stylePluginOptions' in the options for the`style-loader`, or in production the[`MiniCssExtractPlugin.loader`](https://github.com/webpack-contrib/mini-css-extract-plugin) is used instead.
