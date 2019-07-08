@@ -10,7 +10,7 @@ or
 
 `npm install --save gatsby-plugin-scss-typescript node-sass`
 
-From v4.0.0, node-sass has been moved to a peer dependency.
+**NOTE:** From v4.0.0, node-sass has been moved to a peer dependency.
 
 ## Usage
 
