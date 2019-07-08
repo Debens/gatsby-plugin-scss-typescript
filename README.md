@@ -67,7 +67,3 @@ plugins: [
     },
 ];
 ```
-
-### Style Options
-
-Use the key `stylePluginOptions' in the options for the`style-loader`, or in production the[`MiniCssExtractPlugin.loader`](https://github.com/webpack-contrib/mini-css-extract-plugin) is used instead.

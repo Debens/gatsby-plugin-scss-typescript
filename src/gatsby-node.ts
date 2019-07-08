@@ -5,7 +5,7 @@ export const onCreateWebpackConfig = ({ stage, plugins, rules, actions }, option
     const isProduction = !stage.includes('develop');
 
     const {
-        stylePluginOptions,
+        cssMinifyOptions,
         cssExtractOptions,
         cssLoaderOptions,
         sassLoaderOptions,
@@ -49,12 +49,9 @@ export const onCreateWebpackConfig = ({ stage, plugins, rules, actions }, option
         case 'develop-html': {
             setWebpackConfig({
                 optimization: {
-                    minimizer: [plugins.minifyCss()],
+                    minimizer: [plugins.minifyCss(cssMinifyOptions)],
                 },
-                plugins: [
-                    plugins.extractText(cssExtractOptions),
-                    plugins.extractText(stylePluginOptions),
-                ],
+                plugins: [plugins.extractText(cssExtractOptions)],
                 module: {
                     rules: [
                         {
