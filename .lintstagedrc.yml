@@ -1,0 +1,8 @@
+linters:
+    "*.{ts}":
+        - prettier --write
+        - yarn lint
+        - git add
+    "*.{json,md,js}":
+        - prettier --write
+        - git add"

@@ -1,7 +1,11 @@
 node_modules/
+npm-debug.log
+yarn-error.log
+.npmrc
+
+.jest
+coverage/
+
+.vscode/
 
 gatsby-node.js
-defaults.js
-resolve.js
-
-.npmrc

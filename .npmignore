@@ -2,11 +2,14 @@ src/
 
 .circleci/
 .gitignore
+.vscode/
 
 yarn.lock
 
-.prettierrc
+.prettierrc.yml
 tsconfig.json
-tslint.json
+.tslint.json
+eslintrc
+*.config.js
 
 .npmrc

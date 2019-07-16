@@ -1,0 +1,26 @@
+{
+    "env": {
+        "node": true,
+        "jest": true,
+        "jest/globals": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 2019,
+        "sourceType": "module",
+        "project": "./tsconfig.json",
+        "ecmaFeatures": {
+            "modules": true
+        }
+    },
+    "plugins": ["@typescript-eslint", "@typescript-eslint/tslint", "jest"],
+    "extends": ["prettier", "prettier/@typescript-eslint", "plugin:jest/recommended"],
+    "rules": {
+        "@typescript-eslint/tslint/config": [
+            "warn",
+            {
+                "lintFile": "./tslint.json"
+            }
+        ]
+    }
+}
