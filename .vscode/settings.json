@@ -1,0 +1,83 @@
+{
+    "typescript.tsdk": "./packages/originations-mobile/node_modules/typescript/lib",
+    "importSorter.generalConfiguration.exclude": [],
+    "importSorter.generalConfiguration.sortOnBeforeSave": true,
+    "importSorter.importStringConfiguration.hasSemicolon": true,
+    "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.count": 90,
+    "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.type": "newLineEachExpressionAfterCountLimitExceptIfOnlyOne",
+    "importSorter.importStringConfiguration.numberOfEmptyLinesAfterAllImports": 1,
+    "importSorter.importStringConfiguration.quoteMark": "single",
+    "importSorter.importStringConfiguration.spacingPerImportExpression.afterComma": 1,
+    "importSorter.importStringConfiguration.spacingPerImportExpression.afterStartingBracket": 1,
+    "importSorter.importStringConfiguration.spacingPerImportExpression.beforeComma": 0,
+    "importSorter.importStringConfiguration.spacingPerImportExpression.beforeEndingBracket": 1,
+    "importSorter.importStringConfiguration.tabSize": 4,
+    "importSorter.importStringConfiguration.tabType": "space",
+    "importSorter.importStringConfiguration.trailingComma": "multiLine",
+    "importSorter.sortConfiguration.customOrderingRules.defaultNumberOfEmptyLinesAfterGroup": 1,
+    "importSorter.sortConfiguration.customOrderingRules.defaultOrderLevel": 200,
+    "importSorter.sortConfiguration.customOrderingRules.disableDefaultOrderSort": false,
+    "importSorter.sortConfiguration.customOrderingRules.rules": [
+        {
+            "type": "importMember",
+            "regex": "^$",
+            "orderLevel": 10,
+            "disableSort": true
+        },
+        {
+            "regex": "^react",
+            "orderLevel": 50
+        },
+        {
+            "regex": "^redux",
+            "orderLevel": 100
+        },
+        {
+            "regex": "^[@]",
+            "orderLevel": 150
+        },
+        // external modules - use default level
+        // ...
+        // local webpack aliased modules
+        {
+            "regex": "^__]",
+            "orderLevel": 250
+        },
+        // up tree relative local files
+        {
+            "regex": "^\\.\\.",
+            "orderLevel": 300
+        },
+        // relative local files
+        {
+            "regex": "^\\.",
+            "orderLevel": 350
+        }
+    ],
+    "importSorter.sortConfiguration.importMembers.direction": "asc",
+    "importSorter.sortConfiguration.importMembers.order": "caseInsensitive",
+    "importSorter.sortConfiguration.importPaths.direction": "asc",
+    "importSorter.sortConfiguration.importPaths.order": "caseInsensitive",
+    "importSorter.sortConfiguration.joinImportPaths": true,
+    "eslint.autoFixOnSave": true,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        {
+            "language": "typescript",
+            "autoFix": true
+        },
+        {
+            "language": "typescriptreact",
+            "autoFix": true
+        }
+    ],
+    "eslint.workingDirectories": [
+        {
+            "directory": "./packages/originations-mobile",
+            "changeProcessCWD": true
+        }
+    ],
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true
+}

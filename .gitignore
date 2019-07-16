@@ -6,6 +6,4 @@ yarn-error.log
 .jest
 coverage/
 
-.vscode/
-
 gatsby-node.js
