@@ -1,9 +1,5 @@
 import { onCreateWebpackConfig } from './gatsby-node';
 
-// jest.spyOn(require, 'resolve').mockImplementation(
-//     name => `/node_modules/${name}/index.js`,
-// );
-
 const rules = {
     css: args => ({
         test: /\.css$/,
