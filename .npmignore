@@ -8,6 +8,7 @@ src/
 
 
 .prettierrc.yml
+.lintstagedrc.yml
 tsconfig.json
 .tslint.json
 eslintrc
