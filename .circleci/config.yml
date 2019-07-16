@@ -7,7 +7,7 @@ version: 2
 defaults: &defaults
     working_directory: ~/repo
     docker:
-        - image: circleci/node:8.9.1
+        - image: circleci/node:11
 
 jobs:
     build:
@@ -75,6 +75,7 @@ workflows:
                   type: approval
                   requires:
                       - build
+                      - test
             - version:
                   requires:
                       - publish_approval
