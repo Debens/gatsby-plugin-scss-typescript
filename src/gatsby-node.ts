@@ -12,21 +12,21 @@ export const onCreateWebpackConfig = ({ stage, plugins, rules, actions }, option
     } = options;
 
     const useCss: RuleSetLoader[] = rules.css(cssLoaderOptions).use;
-    const useCssModules: RuleSetLoader[] = rules.cssModules({
-        camelCase: true,
-        namedExport: true,
-        ...cssLoaderOptions,
-    }).use;
+    const useCssModules: RuleSetLoader[] = rules
+        .cssModules({
+            camelCase: true,
+            namedExport: true,
+            ...cssLoaderOptions,
+        })
+        .use.map(loader => {
+            ['/css-loader/locals', '/css-loader/'].forEach(modulePath => {
+                if (loader.loader.includes(modulePath)) {
+                    loader.loader = require.resolve('typings-for-css-modules-loader');
+                }
+            });
 
-    useCssModules.map(loader => {
-        ['/css-loader/locals', '/css-loader/'].forEach(modulePath => {
-            if (loader.loader.includes(modulePath)) {
-                loader.loader = require.resolve('typings-for-css-modules-loader');
-            }
+            return loader;
         });
-
-        return loader;
-    });
 
     const sassLoaders: RuleSetLoader[] = [
         { loader: 'resolve-url-loader' },
@@ -48,10 +48,6 @@ export const onCreateWebpackConfig = ({ stage, plugins, rules, actions }, option
         case 'build-html':
         case 'develop-html': {
             setWebpackConfig({
-                optimization: {
-                    minimizer: [plugins.minifyCss(cssMinifyOptions)],
-                },
-                plugins: [plugins.extractText(cssExtractOptions)],
                 module: {
                     rules: [
                         {
@@ -68,6 +64,10 @@ export const onCreateWebpackConfig = ({ stage, plugins, rules, actions }, option
                         },
                     ],
                 },
+                optimization: {
+                    minimizer: [plugins.minifyCss(cssMinifyOptions)],
+                },
+                plugins: [plugins.extractText(cssExtractOptions)],
             });
         }
     }
