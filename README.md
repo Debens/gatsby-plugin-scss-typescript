@@ -1,4 +1,17 @@
-# gatsby-plugin-scss-typescript &middot; [![CircleCI](https://circleci.com/gh/Debens/gatsby-plugin-scss-typescript.svg?style=shield&circle-token=2d506be7c3ec07e440056881ce5c376f7618f214)](https://circleci.com/gh/Debens/gatsby-plugin-scss-typescript) [![NPM Version](https://img.shields.io/npm/v/gatsby-plugin-scss-typescript.svg)](https://www.npmjs.com/package/gatsby-plugin-scss-typescript) ![Bundle size](https://badgen.net/bundlephobia/minzip/gatsby-plugin-scss-typescript) [![downloads](https://img.shields.io/npm/dt/gatsby-plugin-scss-typescript.svg)](https://www.npmjs.com/package/gatsby-plugin-scss-typescript)
+<div align="center">
+  <h1>gatsby-plugin-scss-typescript</h1>
+  🛠️
+</div>
+
+<br />
+
+[![CircleCI](https://circleci.com/gh/Debens/gatsby-plugin-scss-typescript.svg?style=shield&circle-token=2d506be7c3ec07e440056881ce5c376f7618f214)](https://circleci.com/gh/Debens/gatsby-plugin-scss-typescript)
+[![NPM Version](https://img.shields.io/npm/v/gatsby-plugin-scss-typescript.svg)](https://www.npmjs.com/package/gatsby-plugin-scss-typescript)
+[![npm](https://img.shields.io/npm/dw/gatsby-plugin-scss-typescript.svg)](https://www.npmjs.com/package/gatsby-plugin-scss-typescript)
+![npm bundle size](https://img.shields.io/bundlephobia/min/gatsby-plugin-scss-typescript.svg)
+![License](https://img.shields.io/npm/l/gatsby-plugin-scss-typescript.svg)
+
+<hr />
 
 Includes Gatsby V2 webpack support for SCSS stylesheets modules and automatic generation of accompanying typing declaration (`.d.ts`) files.
 
