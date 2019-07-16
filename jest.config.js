@@ -1,13 +1,11 @@
 const package = require('./package');
 
 module.exports = {
-    moduleFileExtensions: ['js', 'ts'],
-    transform: {
-        '\\.(ts|tsx)$': 'ts-jest',
-    },
-    testPathIgnorePatterns: ['\\.snap$', 'node_modules/'],
-    cacheDirectory: '<rootDir>/.jest/cache',
-    reporters: ['default'],
+    cacheDirectory: '<rootDir>/test/.jest/cache',
+    coverageDirectory: '<rootDir>/test/coverage',
+    coveragePathIgnorePatterns: ['node_modules'],
+    // setupFiles: ['<rootDir>/jest/globals.ts'],
+    coverageReporters: ['lcov', 'json', 'text'],
     coverageThreshold: {
         global: {
             branches: 85,
@@ -16,17 +14,20 @@ module.exports = {
             statements: 85,
         },
     },
-    coveragePathIgnorePatterns: ['node_modules'],
-    // setupFiles: ['<rootDir>/jest/globals.ts'],
-    coverageReporters: ['lcov', 'json', 'text'],
-    coverageDirectory: '<rootDir>/coverage',
+    displayName: package.name,
     globals: {
         'ts-jest': {
             tsConfig: '<rootDir>/tsconfig.json',
         },
         window: {},
     },
-    verbose: true,
+    moduleFileExtensions: ['js', 'ts'],
     name: package.name,
-    displayName: package.name,
+    reporters: ['default'],
+    snapshotSerializers: ['<rootDir>/test/serializer.ts'],
+    testPathIgnorePatterns: ['\\.snap$', 'node_modules/'],
+    transform: {
+        '\\.(ts|tsx)$': 'ts-jest',
+    },
+    verbose: true,
 };

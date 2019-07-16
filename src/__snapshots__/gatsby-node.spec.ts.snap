@@ -13,10 +13,10 @@ exports[`gatsby-plugin-sass given stage build-html when creating webpack config 
                   "test": /\\\\\\.module\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/typings-for-css-modules-loader/lib/index.js",
+                      "loader": "/node_modules/typings-for-css-modules-loader/lib/index.js",
                       "options": Object {
                         "camelCase": true,
                         "modules": true,
@@ -24,7 +24,7 @@ exports[`gatsby-plugin-sass given stage build-html when creating webpack config 
                       },
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/postcss-loader/src/index.js",
+                      "loader": "/node_modules/postcss-loader/src/index.js",
                     },
                     Object {
                       "loader": "resolve-url-loader",
@@ -41,14 +41,14 @@ exports[`gatsby-plugin-sass given stage build-html when creating webpack config 
                   "test": /\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/css-loader/dist/cjs.js",
+                      "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": undefined,
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/postcss-loader/src/index.js",
+                      "loader": "/node_modules/postcss-loader/src/index.js",
                     },
                     Object {
                       "loader": "resolve-url-loader",
@@ -98,10 +98,10 @@ exports[`gatsby-plugin-sass given stage build-html when creating webpack config 
                   "test": /\\\\\\.module\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/typings-for-css-modules-loader/lib/index.js",
+                      "loader": "/node_modules/typings-for-css-modules-loader/lib/index.js",
                       "options": Object {
                         "camelCase": true,
                         "importLoaders": 1,
@@ -111,7 +111,7 @@ exports[`gatsby-plugin-sass given stage build-html when creating webpack config 
                       },
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/postcss-loader/src/index.js",
+                      "loader": "/node_modules/postcss-loader/src/index.js",
                     },
                     Object {
                       "loader": "resolve-url-loader",
@@ -128,17 +128,17 @@ exports[`gatsby-plugin-sass given stage build-html when creating webpack config 
                   "test": /\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/css-loader/dist/cjs.js",
+                      "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
                         "importLoaders": 1,
                         "localIdentName": "[name]_[local]___[hash:base64:5]_[emoji:1]",
                       },
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/postcss-loader/src/index.js",
+                      "loader": "/node_modules/postcss-loader/src/index.js",
                     },
                     Object {
                       "loader": "resolve-url-loader",
@@ -188,10 +188,10 @@ exports[`gatsby-plugin-sass given stage build-html when creating webpack config 
                   "test": /\\\\\\.module\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/typings-for-css-modules-loader/lib/index.js",
+                      "loader": "/node_modules/typings-for-css-modules-loader/lib/index.js",
                       "options": Object {
                         "camelCase": true,
                         "modules": true,
@@ -199,7 +199,7 @@ exports[`gatsby-plugin-sass given stage build-html when creating webpack config 
                       },
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/postcss-loader/src/index.js",
+                      "loader": "/node_modules/postcss-loader/src/index.js",
                     },
                     Object {
                       "loader": "resolve-url-loader",
@@ -220,14 +220,14 @@ exports[`gatsby-plugin-sass given stage build-html when creating webpack config 
                   "test": /\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/css-loader/dist/cjs.js",
+                      "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": undefined,
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/postcss-loader/src/index.js",
+                      "loader": "/node_modules/postcss-loader/src/index.js",
                     },
                     Object {
                       "loader": "resolve-url-loader",
@@ -281,10 +281,10 @@ exports[`gatsby-plugin-sass given stage build-javascript when creating webpack c
                   "test": /\\\\\\.module\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/typings-for-css-modules-loader/lib/index.js",
+                      "loader": "/node_modules/typings-for-css-modules-loader/lib/index.js",
                       "options": Object {
                         "camelCase": true,
                         "modules": true,
@@ -292,7 +292,7 @@ exports[`gatsby-plugin-sass given stage build-javascript when creating webpack c
                       },
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/postcss-loader/src/index.js",
+                      "loader": "/node_modules/postcss-loader/src/index.js",
                     },
                     Object {
                       "loader": "resolve-url-loader",
@@ -309,14 +309,14 @@ exports[`gatsby-plugin-sass given stage build-javascript when creating webpack c
                   "test": /\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/css-loader/dist/cjs.js",
+                      "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": undefined,
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/postcss-loader/src/index.js",
+                      "loader": "/node_modules/postcss-loader/src/index.js",
                     },
                     Object {
                       "loader": "resolve-url-loader",
@@ -366,10 +366,10 @@ exports[`gatsby-plugin-sass given stage build-javascript when creating webpack c
                   "test": /\\\\\\.module\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/typings-for-css-modules-loader/lib/index.js",
+                      "loader": "/node_modules/typings-for-css-modules-loader/lib/index.js",
                       "options": Object {
                         "camelCase": true,
                         "importLoaders": 1,
@@ -379,7 +379,7 @@ exports[`gatsby-plugin-sass given stage build-javascript when creating webpack c
                       },
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/postcss-loader/src/index.js",
+                      "loader": "/node_modules/postcss-loader/src/index.js",
                     },
                     Object {
                       "loader": "resolve-url-loader",
@@ -396,17 +396,17 @@ exports[`gatsby-plugin-sass given stage build-javascript when creating webpack c
                   "test": /\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/css-loader/dist/cjs.js",
+                      "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
                         "importLoaders": 1,
                         "localIdentName": "[name]_[local]___[hash:base64:5]_[emoji:1]",
                       },
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/postcss-loader/src/index.js",
+                      "loader": "/node_modules/postcss-loader/src/index.js",
                     },
                     Object {
                       "loader": "resolve-url-loader",
@@ -456,10 +456,10 @@ exports[`gatsby-plugin-sass given stage build-javascript when creating webpack c
                   "test": /\\\\\\.module\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/typings-for-css-modules-loader/lib/index.js",
+                      "loader": "/node_modules/typings-for-css-modules-loader/lib/index.js",
                       "options": Object {
                         "camelCase": true,
                         "modules": true,
@@ -467,7 +467,7 @@ exports[`gatsby-plugin-sass given stage build-javascript when creating webpack c
                       },
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/postcss-loader/src/index.js",
+                      "loader": "/node_modules/postcss-loader/src/index.js",
                     },
                     Object {
                       "loader": "resolve-url-loader",
@@ -488,14 +488,14 @@ exports[`gatsby-plugin-sass given stage build-javascript when creating webpack c
                   "test": /\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/css-loader/dist/cjs.js",
+                      "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": undefined,
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/postcss-loader/src/index.js",
+                      "loader": "/node_modules/postcss-loader/src/index.js",
                     },
                     Object {
                       "loader": "resolve-url-loader",
@@ -549,10 +549,10 @@ exports[`gatsby-plugin-sass given stage develop when creating webpack config and
                   "test": /\\\\\\.module\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/typings-for-css-modules-loader/lib/index.js",
+                      "loader": "/node_modules/typings-for-css-modules-loader/lib/index.js",
                       "options": Object {
                         "camelCase": true,
                         "modules": true,
@@ -560,7 +560,7 @@ exports[`gatsby-plugin-sass given stage develop when creating webpack config and
                       },
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/postcss-loader/src/index.js",
+                      "loader": "/node_modules/postcss-loader/src/index.js",
                     },
                     Object {
                       "loader": "resolve-url-loader",
@@ -577,14 +577,14 @@ exports[`gatsby-plugin-sass given stage develop when creating webpack config and
                   "test": /\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/css-loader/dist/cjs.js",
+                      "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": undefined,
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/postcss-loader/src/index.js",
+                      "loader": "/node_modules/postcss-loader/src/index.js",
                     },
                     Object {
                       "loader": "resolve-url-loader",
@@ -634,10 +634,10 @@ exports[`gatsby-plugin-sass given stage develop when creating webpack config css
                   "test": /\\\\\\.module\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/typings-for-css-modules-loader/lib/index.js",
+                      "loader": "/node_modules/typings-for-css-modules-loader/lib/index.js",
                       "options": Object {
                         "camelCase": true,
                         "importLoaders": 1,
@@ -647,7 +647,7 @@ exports[`gatsby-plugin-sass given stage develop when creating webpack config css
                       },
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/postcss-loader/src/index.js",
+                      "loader": "/node_modules/postcss-loader/src/index.js",
                     },
                     Object {
                       "loader": "resolve-url-loader",
@@ -664,17 +664,17 @@ exports[`gatsby-plugin-sass given stage develop when creating webpack config css
                   "test": /\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/css-loader/dist/cjs.js",
+                      "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
                         "importLoaders": 1,
                         "localIdentName": "[name]_[local]___[hash:base64:5]_[emoji:1]",
                       },
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/postcss-loader/src/index.js",
+                      "loader": "/node_modules/postcss-loader/src/index.js",
                     },
                     Object {
                       "loader": "resolve-url-loader",
@@ -724,10 +724,10 @@ exports[`gatsby-plugin-sass given stage develop when creating webpack config sas
                   "test": /\\\\\\.module\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/typings-for-css-modules-loader/lib/index.js",
+                      "loader": "/node_modules/typings-for-css-modules-loader/lib/index.js",
                       "options": Object {
                         "camelCase": true,
                         "modules": true,
@@ -735,7 +735,7 @@ exports[`gatsby-plugin-sass given stage develop when creating webpack config sas
                       },
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/postcss-loader/src/index.js",
+                      "loader": "/node_modules/postcss-loader/src/index.js",
                     },
                     Object {
                       "loader": "resolve-url-loader",
@@ -756,14 +756,14 @@ exports[`gatsby-plugin-sass given stage develop when creating webpack config sas
                   "test": /\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/css-loader/dist/cjs.js",
+                      "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": undefined,
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/postcss-loader/src/index.js",
+                      "loader": "/node_modules/postcss-loader/src/index.js",
                     },
                     Object {
                       "loader": "resolve-url-loader",
@@ -817,10 +817,10 @@ exports[`gatsby-plugin-sass given stage develop-html when creating webpack confi
                   "test": /\\\\\\.module\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/typings-for-css-modules-loader/lib/index.js",
+                      "loader": "/node_modules/typings-for-css-modules-loader/lib/index.js",
                       "options": Object {
                         "camelCase": true,
                         "modules": true,
@@ -828,7 +828,7 @@ exports[`gatsby-plugin-sass given stage develop-html when creating webpack confi
                       },
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/postcss-loader/src/index.js",
+                      "loader": "/node_modules/postcss-loader/src/index.js",
                     },
                     Object {
                       "loader": "resolve-url-loader",
@@ -845,14 +845,14 @@ exports[`gatsby-plugin-sass given stage develop-html when creating webpack confi
                   "test": /\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/css-loader/dist/cjs.js",
+                      "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": undefined,
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/postcss-loader/src/index.js",
+                      "loader": "/node_modules/postcss-loader/src/index.js",
                     },
                     Object {
                       "loader": "resolve-url-loader",
@@ -902,10 +902,10 @@ exports[`gatsby-plugin-sass given stage develop-html when creating webpack confi
                   "test": /\\\\\\.module\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/typings-for-css-modules-loader/lib/index.js",
+                      "loader": "/node_modules/typings-for-css-modules-loader/lib/index.js",
                       "options": Object {
                         "camelCase": true,
                         "importLoaders": 1,
@@ -915,7 +915,7 @@ exports[`gatsby-plugin-sass given stage develop-html when creating webpack confi
                       },
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/postcss-loader/src/index.js",
+                      "loader": "/node_modules/postcss-loader/src/index.js",
                     },
                     Object {
                       "loader": "resolve-url-loader",
@@ -932,17 +932,17 @@ exports[`gatsby-plugin-sass given stage develop-html when creating webpack confi
                   "test": /\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/css-loader/dist/cjs.js",
+                      "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
                         "importLoaders": 1,
                         "localIdentName": "[name]_[local]___[hash:base64:5]_[emoji:1]",
                       },
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/postcss-loader/src/index.js",
+                      "loader": "/node_modules/postcss-loader/src/index.js",
                     },
                     Object {
                       "loader": "resolve-url-loader",
@@ -992,10 +992,10 @@ exports[`gatsby-plugin-sass given stage develop-html when creating webpack confi
                   "test": /\\\\\\.module\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/typings-for-css-modules-loader/lib/index.js",
+                      "loader": "/node_modules/typings-for-css-modules-loader/lib/index.js",
                       "options": Object {
                         "camelCase": true,
                         "modules": true,
@@ -1003,7 +1003,7 @@ exports[`gatsby-plugin-sass given stage develop-html when creating webpack confi
                       },
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/postcss-loader/src/index.js",
+                      "loader": "/node_modules/postcss-loader/src/index.js",
                     },
                     Object {
                       "loader": "resolve-url-loader",
@@ -1024,14 +1024,14 @@ exports[`gatsby-plugin-sass given stage develop-html when creating webpack confi
                   "test": /\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/css-loader/dist/cjs.js",
+                      "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": undefined,
                     },
                     Object {
-                      "loader": "/Users/andrew.debens/Repositories/Personal/gatsby-plugin-typescript-scss-modules/node_modules/postcss-loader/src/index.js",
+                      "loader": "/node_modules/postcss-loader/src/index.js",
                     },
                     Object {
                       "loader": "resolve-url-loader",
