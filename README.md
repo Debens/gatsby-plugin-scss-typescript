@@ -5,11 +5,13 @@
 
 <br />
 
-[![CircleCI](https://circleci.com/gh/Debens/gatsby-plugin-scss-typescript.svg?style=shield&circle-token=2d506be7c3ec07e440056881ce5c376f7618f214)](https://circleci.com/gh/Debens/gatsby-plugin-scss-typescript)
-[![NPM Version](https://img.shields.io/npm/v/gatsby-plugin-scss-typescript.svg)](https://www.npmjs.com/package/gatsby-plugin-scss-typescript)
-[![npm](https://img.shields.io/npm/dw/gatsby-plugin-scss-typescript.svg)](https://www.npmjs.com/package/gatsby-plugin-scss-typescript)
-![npm bundle size](https://img.shields.io/bundlephobia/min/gatsby-plugin-scss-typescript.svg)
-![License](https://img.shields.io/npm/l/gatsby-plugin-scss-typescript.svg)
+<p align="center">
+    <a href="https://circleci.com/gh/Debens/gatsby-plugin-scss-typescript"><img src="https://circleci.com/gh/Debens/gatsby-plugin-scss-typescript.svg?style=shield&circle-token=2d506be7c3ec07e440056881ce5c376f7618f214)" alt="CircleCI"/></a>
+    <a href="https://www.npmjs.com/package/gatsby-plugin-scss-typescript"><img src="https://img.shields.io/npm/v/gatsby-plugin-scss-typescript.svg" alt="NPM Version" /></a>
+    <a href="https://www.npmjs.com/package/gatsby-plugin-scss-typescript"><img src="https://img.shields.io/npm/dw/gatsby-plugin-scss-typescript.svg" alt="npm" /></a>
+    <img src="https://img.shields.io/bundlephobia/min/gatsby-plugin-scss-typescript.svg" alt="npm bundle size" />
+    <img src="https://img.shields.io/npm/l/gatsby-plugin-scss-typescript.svg" alt="License" />
+</p>
 
 <hr />
 
