@@ -10,25 +10,12 @@ defaults: &defaults
         - image: circleci/node:11
 
 commands:
-    bootstrap:
-        description: 'Checkout and install dependencies'
-        steps:
-            - checkout
-            - restore_cache:
-                  keys:
-                      - jest-cache-v1-{{ arch }}
-                      - yarn-packages-v1-{{ checksum "yarn.lock" }}
-            - run: yarn install
-            - save_cache:
-                  key: yarn-packages-v1-{{ checksum "yarn.lock" }}
-                  paths:
-                      - node_modules
     version:
         description: 'Increment version and commit back'
         steps:
             - run:
                   name: Release
-                  command: yarn release -m $npm_package_version [skip ci]
+                  command: yarn release -m "$npm_package_version [skip ci]"
             - run:
                   name: Avoid hosts unknown for github
                   command: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
@@ -44,24 +31,49 @@ commands:
             - deploy:
                   name: Publish
                   command: npm publish
+    attach_to_workspace:
+        description: 'Attach to workspace'
+        steps:
+            - attach_workspace:
+                  at: ~/repo
 
 jobs:
+    bootstrap:
+        <<: *defaults
+        steps:
+            - checkout
+            - restore_cache:
+                  key: yarn-packages-v1-{{ checksum "yarn.lock" }}
+            - run: yarn install
+            - save_cache:
+                  key: yarn-packages-v1-{{ checksum "yarn.lock" }}
+                  paths:
+                      - node_modules
+            - persist_to_workspace:
+                  root: ~/repo
+                  paths:
+                      - .
     build:
         <<: *defaults
         steps:
-            - bootstrap
+            - attach_to_workspace
             - run:
                   name: Build
                   command: yarn build
             - persist_to_workspace:
                   root: ~/repo
                   paths:
-                      - .
+                      - gatsby-node.js
     test:
         <<: *defaults
         steps:
-            - bootstrap
+            - attach_to_workspace
+            - restore_cache:
+                  key: jest-cache-v1-{{ arch }}
             - run: yarn test:ci
+            - store_artifacts:
+                  name: coverage
+                  path: test/coverage
             - save_cache:
                   key: jest-cache-v1-{{ arch }}
                   paths:
@@ -70,16 +82,20 @@ jobs:
     publish:
         <<: *defaults
         steps:
-            - attach_workspace:
-                  at: ~/repo
+            - attach_to_workspace
             - version
             - release
 workflows:
     version: 2
     default:
         jobs:
-            - build
-            - test
+            - bootstrap
+            - build:
+                  requires:
+                      - bootstrap
+            - test:
+                  requires:
+                      - bootstrap
             - publish_approval:
                   type: approval
                   requires:
