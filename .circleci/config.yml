@@ -50,7 +50,7 @@ jobs:
                   at: ~/repo
             - run:
                   name: Release
-                  command: yarn release
+                  command: yarn release -m $npm_package_version [skip ci]
             - run:
                   name: Avoid hosts unknown for github
                   command: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
