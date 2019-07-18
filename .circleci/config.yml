@@ -9,45 +9,23 @@ defaults: &defaults
     docker:
         - image: circleci/node:11
 
-jobs:
-    build:
-        <<: *defaults
+commands:
+    bootstrap:
+        description: 'Checkout and install dependencies'
         steps:
             - checkout
-            # Download and cache dependencies
             - restore_cache:
-                  key: v1-dependencies-{{ checksum "package.json" }}
+                  keys:
+                      - jest-cache-v1-{{ arch }}
+                      - yarn-packages-v1-{{ checksum "yarn.lock" }}
             - run: yarn install
             - save_cache:
-                  key: v1-dependencies-{{ checksum "package.json" }}
+                  key: yarn-packages-v1-{{ checksum "yarn.lock" }}
                   paths:
                       - node_modules
-            - run:
-                  name: Build
-                  command: yarn build
-            - persist_to_workspace:
-                  root: ~/repo
-                  paths: .
-    test:
-        <<: *defaults
+    version:
+        description: 'Increment version and commit back'
         steps:
-            - checkout
-            # Download and cache dependencies
-            - restore_cache:
-                  key: v1-dependencies-{{ checksum "package.json" }}
-            - run: yarn install
-            - save_cache:
-                  key: v1-dependencies-{{ checksum "package.json" }}
-                  paths:
-                      - node_modules
-            - run:
-                  name: Test
-                  command: yarn test:ci
-    publish:
-        <<: *defaults
-        steps:
-            - attach_workspace:
-                  at: ~/repo
             - run:
                   name: Release
                   command: yarn release -m $npm_package_version [skip ci]
@@ -57,12 +35,45 @@ jobs:
             - run:
                   name: Push
                   command: git push --follow-tags origin master
+    release:
+        description: 'Release new version'
+        steps:
             - run:
                   name: Authenticate
                   command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
             - run:
                   name: Publish
                   command: npm publish
+
+jobs:
+    build:
+        <<: *defaults
+        steps:
+            - bootstrap
+            - run:
+                  name: Build
+                  command: yarn build
+            - persist_to_workspace:
+                  root: ~/repo
+                  paths:
+                      - gatsby-node.js
+    test:
+        <<: *defaults
+        steps:
+            - bootstrap
+            - run: yarn test:ci
+            - save_cache:
+                  key: jest-cache-v1-{{ arch }}
+                  paths:
+                      - test/.jest
+
+    publish:
+        <<: *defaults
+        steps:
+            - attach_workspace:
+                  at: ~/repo
+            - version
+            - release
 workflows:
     version: 2
     default:
@@ -74,6 +85,9 @@ workflows:
                   requires:
                       - build
                       - test
+                  filters:
+                      branches:
+                          only: master
             - publish:
                   requires:
                       - publish_approval
