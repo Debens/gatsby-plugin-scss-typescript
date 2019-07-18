@@ -56,7 +56,7 @@ jobs:
             - persist_to_workspace:
                   root: ~/repo
                   paths:
-                      - gatsby-node.js
+                      - .
     test:
         <<: *defaults
         steps:
