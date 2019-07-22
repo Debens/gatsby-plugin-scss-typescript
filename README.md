@@ -40,36 +40,32 @@ plugins: ['gatsby-plugin-scss-typescript'];
 
 ```javascript
 // component.ts
-import styles from './styles.module.scss';
+import * as styles from './styles.module.scss';
 ```
 
 Only files that include the `.module.scss` extensions shall be treated as module files, and hence have typings generated at build time. `.scss` files shall be loaded using the regular [css-loader](https://github.com/webpack-contrib/css-loader).
 
 ## Options
 
-If you need to pass options to the underlying css-loader use the plugins options; see [css-loader](https://github.com/webpack-contrib/css-loader)
-for all available options.
+The default gatsby rule loaders are used where possible, see the [gatsby webpack utils](https://github.com/gatsbyjs/gatsby/blob/0deda7b5646b3eb8db1b1873faf13553311c4878/packages/gatsby/src/utils/webpack-utils.js) for more info.
 
-```javascript
-// in gatsby-config.js
-plugins: [
-    {
-        resolve: 'gatsby-plugin-scss-typescript',
-        options: {
-            cssLoaderOptions: {
-                importLoaders: 1,
-                localIdentName: '[name]_[local]___[hash:base64:5]_[emoji:1]',
-            },
-        },
-    },
-];
-```
+### cssLoaderOptions
 
-### Loader Options
+The `cssLoaderOptions` key is passed to the [css-loader](https://github.com/webpack-contrib/css-loader), with a few [defaults](https://github.com/gatsbyjs/gatsby/blob/0deda7b5646b3eb8db1b1873faf13553311c4878/packages/gatsby/src/utils/webpack-utils.js#L392-L403) from gatsby.
 
-The default gatsby loaders are used where possible, see the [gatsby webpack utils](https://github.com/gatsbyjs/gatsby/blob/0deda7b5646b3eb8db1b1873faf13553311c4878/packages/gatsby/src/utils/webpack-utils.js) for more info.
+### sassLoaderOptions
 
-Use the keys `cssLoaderOptions` & `sassLoaderOptions` to pass options to the `css-loader` and `sass-loader` respectively.
+The `sassLoaderOptions` key is passed to the [sass-loader](https://github.com/webpack-contrib/sass-loader).
+
+### cssMinifyOptions
+
+The `cssMinifyOptions` key is passed to the [OptimizeCssAssetsPlugin](https://github.com/NMFR/optimize-css-assets-webpack-plugin).
+
+### cssExtractOptions
+
+The `cssExtractOptions` key is passed to the [MiniCssExtractPlugin](https://github.com/gatsbyjs/gatsby/blob/0deda7b5646b3eb8db1b1873faf13553311c4878/packages/gatsby/src/utils/webpack-utils.js#L482-L487).
+
+### Example
 
 ```javascript
 // in gatsby-config.js
@@ -83,6 +79,14 @@ plugins: [
             },
             sassLoaderOptions: {
                 includePaths: [path.resolve(__dirname, './src/styles/scss')],
+            },
+            cssMinifyOptions: {
+                assetNameRegExp: /\.optimize\.css$/g,
+                canPrint: true,
+            },
+            cssExtractOptions: {
+                filename: '[name].css',
+                chunkFilename: '[id].css',
             },
         },
     },
