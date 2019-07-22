@@ -20,11 +20,13 @@ export const onCreateWebpackConfig = ({ stage, plugins, rules, actions }, option
             ...cssLoaderOptions,
         })
         .use.map(loader => {
-            ['/css-loader/locals', '/css-loader/'].forEach(modulePath => {
-                if (loader.loader.includes(modulePath)) {
-                    loader.loader = require.resolve('typings-for-css-modules-loader');
-                }
-            });
+            if (!isProduction) {
+                ['/css-loader/locals', '/css-loader/'].forEach(modulePath => {
+                    if (loader.loader.includes(modulePath)) {
+                        loader.loader = require.resolve('typings-for-css-modules-loader');
+                    }
+                });
+            }
 
             return loader;
         });
