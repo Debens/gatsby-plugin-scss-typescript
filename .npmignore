@@ -1,4 +1,5 @@
 src/
+test/
 
 .circleci/
 .gitignore
@@ -7,11 +8,10 @@ src/
 *.lock
 
 
-.prettierrc.yml
-.lintstagedrc.yml
 tsconfig.json
-.tslint.json
-eslintrc
+tslint.json
+.eslintrc
 *.config.js
+*.yml
 
 .npmrc
