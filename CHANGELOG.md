@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.0.7](https://github.com/debens/gatsby-plugin-scss-typescript/compare/v4.0.6...v4.0.7) (2019-07-22)
+
+
+### Bug Fixes
+
+* gastby build not adding classes to html ([2f56552](https://github.com/debens/gatsby-plugin-scss-typescript/commit/2f56552))
+
+
+
 ### [4.0.6](https://github.com/debens/gatsby-plugin-scss-typescript/compare/v4.0.4...v4.0.6) (2019-07-18)
 
 ### [4.0.5](https://github.com/debens/gatsby-plugin-scss-typescript/compare/v4.0.4...v4.0.5) (2019-07-18)
