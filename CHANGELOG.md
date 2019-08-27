@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.0.8](https://github.com/debens/gatsby-plugin-scss-typescript/compare/v4.0.7...v4.0.8) (2019-08-27)
+
+
+### Bug Fixes
+
+* updating eslint to patch vulnerabilities ([d09884a](https://github.com/debens/gatsby-plugin-scss-typescript/commit/d09884a))
+
+
+
 ### [4.0.7](https://github.com/debens/gatsby-plugin-scss-typescript/compare/v4.0.6...v4.0.7) (2019-07-22)
 
 
