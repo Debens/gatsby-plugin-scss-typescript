@@ -21,7 +21,7 @@ export const onCreateWebpackConfig = ({ stage, plugins, rules, actions }, option
         })
         .use.map(loader => {
             if (!isProduction) {
-                ['/css-loader/locals', '/css-loader/'].forEach(modulePath => {
+                ['/css-loader/locals', '/css-loader/', '\\css-loader\\locals', '\\css-loader\\'].forEach(modulePath => {
                     if (loader.loader.includes(modulePath)) {
                         loader.loader = require.resolve('typings-for-css-modules-loader');
                     }
