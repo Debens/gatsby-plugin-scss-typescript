@@ -1,6 +1,6 @@
 {
     "name": "gatsby-plugin-scss-typescript",
-    "version": "4.0.9",
+    "version": "4.0.10",
     "author": "Andrew Debens",
     "description": "GatsbyJS plugin for using SCSS Modules and generating Typescript declaration files",
     "repository": {

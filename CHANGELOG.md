@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.0.10](https://github.com/debens/gatsby-plugin-scss-typescript/compare/v4.0.8...v4.0.10) (2019-12-29)
+
+
+### Bug Fixes
+
+* security issue with handlebars ([b421b8d](https://github.com/debens/gatsby-plugin-scss-typescript/commit/b421b8ddda0f467865d5f7c31b2105a3ad66d44f))
+* temp adding windows paths until proper fix ([9bcf8f0](https://github.com/debens/gatsby-plugin-scss-typescript/commit/9bcf8f07c09f9adaf0df21621cc0c75bffb19c41))
+
 ### [4.0.9](https://github.com/debens/gatsby-plugin-scss-typescript/compare/v4.0.8...v4.0.9) (2019-12-29)
 
 
