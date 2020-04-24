@@ -15,7 +15,7 @@
 
 <hr />
 
-Includes Gatsby V2 webpack support for SCSS stylesheets modules and automatic generation of accompanying typing declaration (`.d.ts`) files.
+Includes Gatsby V2 drop-in webpack support for SCSS stylesheets modules & automatic generation of accompanying typing declaration (`.d.ts`) files.
 
 ## Install
 
