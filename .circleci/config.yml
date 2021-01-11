@@ -29,13 +29,10 @@ commands:
             - run:
                   name: Release
                   command: |
-                      yarn release:alpha -m "chore(release-alpha): [skip ci]"
+                      yarn release:alpha alpha-$CIRCLE_BUILD_NUM -m "chore(release-alpha): [skip ci]"
             - run:
                   name: Avoid hosts unknown for github
                   command: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
-            - run:
-                  name: Push
-                  command: git push --follow-tags origin master
     release:
         description: 'Release new version'
         steps:
@@ -123,8 +120,7 @@ workflows:
             - publish_approval:
                   type: approval
                   requires:
-                      - build
-                      - test
+                      - publish_alpha
                   filters:
                       branches:
                           only: master
