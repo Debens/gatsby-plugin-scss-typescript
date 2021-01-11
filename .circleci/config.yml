@@ -42,6 +42,15 @@ commands:
             - deploy:
                   name: Publish
                   command: npm publish
+    release_alpha:
+        description: 'Release new alpha version'
+        steps:
+            - run:
+                  name: Authenticate
+                  command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
+            - deploy:
+                  name: Publish
+                  command: npm publish --tag alpha
     attach_to_workspace:
         description: 'Attach to workspace'
         steps:
@@ -101,7 +110,7 @@ jobs:
         steps:
             - attach_to_workspace
             - version_alpha
-            - release
+            - release_alpha
 workflows:
     version: 2
     default:
