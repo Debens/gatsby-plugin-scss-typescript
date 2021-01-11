@@ -29,7 +29,7 @@ commands:
             - run:
                   name: Release
                   command: |
-                      yarn release:alpha -m "chore(release-alpha): [skip ci]"
+                      yarn release:alpha alpha-$CIRCLE_BUILD_NUM -m "chore(release-alpha): [skip ci]"
             - run:
                   name: Avoid hosts unknown for github
                   command: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
@@ -123,8 +123,7 @@ workflows:
             - publish_approval:
                   type: approval
                   requires:
-                      - build
-                      - test
+                      - publish_alpha
                   filters:
                       branches:
                           only: master
