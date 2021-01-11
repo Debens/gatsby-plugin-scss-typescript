@@ -1,7 +1,5 @@
 '*.{ts}':
     - 'prettier --write'
     - 'yarn lint'
-    - 'git add'
 '*.{json,md,js,yml}':
     - 'prettier --write'
-    - 'git add'
