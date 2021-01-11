@@ -19,13 +19,11 @@ Includes Gatsby V2 drop-in webpack support for SCSS stylesheets modules & automa
 
 ## Install
 
-`yarn add --dev gatsby-plugin-scss-typescript node-sass`
+`yarn add --dev sass gatsby-plugin-scss-typescript`
 
 or
 
-`npm install --save-dev gatsby-plugin-scss-typescript node-sass`
-
-**NOTE:** From v4.0.0, node-sass has been moved to a peer dependency.
+`npm install --save-dev sass gatsby-plugin-scss-typescript`
 
 ## Usage
 
@@ -105,7 +103,7 @@ Yes, it does generate a bunch of files, one for each `.module.scss` file importe
 
 Thats better as a question. These are [Typescript declaration files](https://microsoft.github.io/TypeScript-New-Handbook/chapters/type-declarations/), they essentially describe a js module, such that TS can expect the details that are declared.
 
-In this case they are describing what the scss will look like once it has been turned into a js module. 
+In this case they are describing what the scss will look like once it has been turned into a js module.
 
 This is what is happening under the surface, when you write:
 
@@ -141,12 +139,11 @@ declare module '*.scss' {
 
 You animal. 🦁
 
-
 #### <u>I'm not seeing any files being created?</u><a name="no_files"></a>
 
 Firstly make sure your file are suffixed with `.module.scss`, the plugin won't generate declarations for regular `.scss` files by design. This is to give the most power to you!
 
-Also, declaration files aren't generated for all scenarios. This is a development aid plugin, which means the files are only generated in development, not production. 
+Also, declaration files aren't generated for all scenarios. This is a development aid plugin, which means the files are only generated in development, not production.
 
 In production the loader is swapped out to improve performance. This means filse will only be generated when you are running `gatsby develop`, but changes to files will be picked up and amended during hot reloading.
 
