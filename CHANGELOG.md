@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.0.14-0](https://github.com/debens/gatsby-plugin-scss-typescript/compare/v4.0.13...v4.0.14-0) (2021-01-11)
+
 ### [4.0.13](https://github.com/debens/gatsby-plugin-scss-typescript/compare/v4.0.12...v4.0.13) (2020-06-15)
 
 ### [4.0.12](https://github.com/debens/gatsby-plugin-scss-typescript/compare/v4.0.11...v4.0.12) (2020-05-28)
