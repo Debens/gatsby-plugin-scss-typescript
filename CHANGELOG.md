@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.1.0-0](https://github.com/debens/gatsby-plugin-scss-typescript/compare/v4.0.14-0...v4.1.0-0) (2021-01-11)
+
+
+### Features
+
+* supporting sass v5 / ([f413b0e](https://github.com/debens/gatsby-plugin-scss-typescript/commit/f413b0e95449515c17fc8e899e9cc0d99a8d71f3))
+
 ### [4.0.14-0](https://github.com/debens/gatsby-plugin-scss-typescript/compare/v4.0.13...v4.0.14-0) (2021-01-11)
 
 ### [4.0.13](https://github.com/debens/gatsby-plugin-scss-typescript/compare/v4.0.12...v4.0.13) (2020-06-15)
