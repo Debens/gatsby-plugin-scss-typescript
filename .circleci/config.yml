@@ -23,6 +23,19 @@ commands:
             - run:
                   name: Push
                   command: git push --follow-tags origin master
+    version_alpha:
+        description: 'Increment version and commit back'
+        steps:
+            - run:
+                  name: Release
+                  command: |
+                      yarn release:alpha -m "chore(release-alpha): [skip ci]"
+            - run:
+                  name: Avoid hosts unknown for github
+                  command: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+            - run:
+                  name: Push
+                  command: git push --follow-tags origin master
     release:
         description: 'Release new version'
         steps:
@@ -86,6 +99,12 @@ jobs:
             - attach_to_workspace
             - version
             - release
+    publish_alpha:
+        <<: *defaults
+        steps:
+            - attach_to_workspace
+            - version_alpha
+            - release
 workflows:
     version: 2
     default:
@@ -97,6 +116,10 @@ workflows:
             - test:
                   requires:
                       - bootstrap
+            - publish_alpha:
+                  requires:
+                      - test
+                      - build
             - publish_approval:
                   type: approval
                   requires:
