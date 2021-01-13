@@ -10,26 +10,16 @@ export const onCreateWebpackConfig = ({ stage, plugins, rules, actions }, option
         cssExtractOptions,
         cssLoaderOptions,
         sassLoaderOptions,
+        declarationOptions,
     } = options;
 
-    const useCss: RuleSetLoader[] = rules.css(cssLoaderOptions).use;
-    const useCssModules: RuleSetLoader[] = rules
-        .cssModules({
-            camelCase: true,
-            namedExport: true,
-            ...cssLoaderOptions,
-        })
-        .use.map(loader => {
-            if (!isProduction) {
-                ['/css-loader/locals', '/css-loader/', '\\css-loader\\locals', '\\css-loader\\'].forEach(modulePath => {
-                    if (loader.loader.includes(modulePath)) {
-                        loader.loader = require.resolve('typings-for-css-modules-loader');
-                    }
-                });
-            }
+    const typeLoader = {
+        loader: '@teamsupercell/typings-for-css-modules-loader',
+        options: declarationOptions,
+    };
 
-            return loader;
-        });
+    const useCss: RuleSetLoader[] = rules.css(cssLoaderOptions).use;
+    const useCssModules: RuleSetLoader[] = rules.cssModules(cssLoaderOptions).use;
 
     const sassLoaders: RuleSetLoader[] = [
         { loader: 'resolve-url-loader' },
@@ -42,8 +32,13 @@ export const onCreateWebpackConfig = ({ stage, plugins, rules, actions }, option
         },
     ];
 
-    useCss.push(...sassLoaders);
-    useCssModules.push(...sassLoaders);
+    const isCssLoader = ({ loader }: RuleSetLoader) =>
+        !!['/css-loader/', '\\css-loader\\'].find(matcher => loader.includes(matcher));
+
+    const css = useCss.concat(sassLoaders);
+    const cssModules = useCssModules
+        .flatMap(loader => (isCssLoader(loader) ? [typeLoader, loader] : loader))
+        .concat(sassLoaders);
 
     switch (stage) {
         case 'develop':
@@ -57,11 +52,11 @@ export const onCreateWebpackConfig = ({ stage, plugins, rules, actions }, option
                             oneOf: [
                                 {
                                     test: /\.module\.s(a|c)ss$/,
-                                    use: useCssModules,
+                                    use: cssModules,
                                 },
                                 {
                                     test: /\.s(a|c)ss$/,
-                                    use: useCss,
+                                    use: css,
                                 },
                             ],
                         },
@@ -70,7 +65,10 @@ export const onCreateWebpackConfig = ({ stage, plugins, rules, actions }, option
                 optimization: {
                     minimizer: [plugins.minifyCss(cssMinifyOptions)],
                 },
-                plugins: [plugins.extractText(cssExtractOptions)],
+                plugins: [
+                    plugins.extractText(cssExtractOptions),
+                    plugins.ignore(/css\.d\.ts$/),
+                ],
             });
         }
     }

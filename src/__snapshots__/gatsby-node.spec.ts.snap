@@ -16,11 +16,13 @@ exports[`gatsby-plugin-sass given stage build-html when creating webpack config 
                       "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
+                      "loader": "@teamsupercell/typings-for-css-modules-loader",
+                      "options": undefined,
+                    },
+                    Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
-                        "camelCase": true,
                         "modules": true,
-                        "namedExport": true,
                       },
                     },
                     Object {
@@ -72,6 +74,7 @@ exports[`gatsby-plugin-sass given stage build-html when creating webpack config 
         },
         "plugins": Array [
           "extractText(undefined)",
+          "ignore(/css\\\\.d\\\\.ts$/)",
         ],
       },
     ],
@@ -101,13 +104,15 @@ exports[`gatsby-plugin-sass given stage build-html when creating webpack config 
                       "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
+                      "loader": "@teamsupercell/typings-for-css-modules-loader",
+                      "options": undefined,
+                    },
+                    Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
-                        "camelCase": true,
                         "importLoaders": 1,
                         "localIdentName": "[name]_[local]___[hash:base64:5]_[emoji:1]",
                         "modules": true,
-                        "namedExport": true,
                       },
                     },
                     Object {
@@ -162,6 +167,7 @@ exports[`gatsby-plugin-sass given stage build-html when creating webpack config 
         },
         "plugins": Array [
           "extractText(undefined)",
+          "ignore(/css\\\\.d\\\\.ts$/)",
         ],
       },
     ],
@@ -191,11 +197,13 @@ exports[`gatsby-plugin-sass given stage build-html when creating webpack config 
                       "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
+                      "loader": "@teamsupercell/typings-for-css-modules-loader",
+                      "options": undefined,
+                    },
+                    Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
-                        "camelCase": true,
                         "modules": true,
-                        "namedExport": true,
                       },
                     },
                     Object {
@@ -255,6 +263,7 @@ exports[`gatsby-plugin-sass given stage build-html when creating webpack config 
         },
         "plugins": Array [
           "extractText(undefined)",
+          "ignore(/css\\\\.d\\\\.ts$/)",
         ],
       },
     ],
@@ -284,11 +293,13 @@ exports[`gatsby-plugin-sass given stage build-javascript when creating webpack c
                       "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
+                      "loader": "@teamsupercell/typings-for-css-modules-loader",
+                      "options": undefined,
+                    },
+                    Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
-                        "camelCase": true,
                         "modules": true,
-                        "namedExport": true,
                       },
                     },
                     Object {
@@ -340,6 +351,7 @@ exports[`gatsby-plugin-sass given stage build-javascript when creating webpack c
         },
         "plugins": Array [
           "extractText(undefined)",
+          "ignore(/css\\\\.d\\\\.ts$/)",
         ],
       },
     ],
@@ -369,13 +381,15 @@ exports[`gatsby-plugin-sass given stage build-javascript when creating webpack c
                       "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
+                      "loader": "@teamsupercell/typings-for-css-modules-loader",
+                      "options": undefined,
+                    },
+                    Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
-                        "camelCase": true,
                         "importLoaders": 1,
                         "localIdentName": "[name]_[local]___[hash:base64:5]_[emoji:1]",
                         "modules": true,
-                        "namedExport": true,
                       },
                     },
                     Object {
@@ -430,6 +444,7 @@ exports[`gatsby-plugin-sass given stage build-javascript when creating webpack c
         },
         "plugins": Array [
           "extractText(undefined)",
+          "ignore(/css\\\\.d\\\\.ts$/)",
         ],
       },
     ],
@@ -459,11 +474,13 @@ exports[`gatsby-plugin-sass given stage build-javascript when creating webpack c
                       "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
+                      "loader": "@teamsupercell/typings-for-css-modules-loader",
+                      "options": undefined,
+                    },
+                    Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
-                        "camelCase": true,
                         "modules": true,
-                        "namedExport": true,
                       },
                     },
                     Object {
@@ -523,6 +540,7 @@ exports[`gatsby-plugin-sass given stage build-javascript when creating webpack c
         },
         "plugins": Array [
           "extractText(undefined)",
+          "ignore(/css\\\\.d\\\\.ts$/)",
         ],
       },
     ],
@@ -552,11 +570,13 @@ exports[`gatsby-plugin-sass given stage develop when creating webpack config and
                       "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
-                      "loader": "/node_modules/typings-for-css-modules-loader/lib/index.js",
+                      "loader": "@teamsupercell/typings-for-css-modules-loader",
+                      "options": undefined,
+                    },
+                    Object {
+                      "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
-                        "camelCase": true,
                         "modules": true,
-                        "namedExport": true,
                       },
                     },
                     Object {
@@ -608,6 +628,7 @@ exports[`gatsby-plugin-sass given stage develop when creating webpack config and
         },
         "plugins": Array [
           "extractText(undefined)",
+          "ignore(/css\\\\.d\\\\.ts$/)",
         ],
       },
     ],
@@ -637,13 +658,15 @@ exports[`gatsby-plugin-sass given stage develop when creating webpack config css
                       "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
-                      "loader": "/node_modules/typings-for-css-modules-loader/lib/index.js",
+                      "loader": "@teamsupercell/typings-for-css-modules-loader",
+                      "options": undefined,
+                    },
+                    Object {
+                      "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
-                        "camelCase": true,
                         "importLoaders": 1,
                         "localIdentName": "[name]_[local]___[hash:base64:5]_[emoji:1]",
                         "modules": true,
-                        "namedExport": true,
                       },
                     },
                     Object {
@@ -698,6 +721,7 @@ exports[`gatsby-plugin-sass given stage develop when creating webpack config css
         },
         "plugins": Array [
           "extractText(undefined)",
+          "ignore(/css\\\\.d\\\\.ts$/)",
         ],
       },
     ],
@@ -727,11 +751,13 @@ exports[`gatsby-plugin-sass given stage develop when creating webpack config sas
                       "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
-                      "loader": "/node_modules/typings-for-css-modules-loader/lib/index.js",
+                      "loader": "@teamsupercell/typings-for-css-modules-loader",
+                      "options": undefined,
+                    },
+                    Object {
+                      "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
-                        "camelCase": true,
                         "modules": true,
-                        "namedExport": true,
                       },
                     },
                     Object {
@@ -791,6 +817,7 @@ exports[`gatsby-plugin-sass given stage develop when creating webpack config sas
         },
         "plugins": Array [
           "extractText(undefined)",
+          "ignore(/css\\\\.d\\\\.ts$/)",
         ],
       },
     ],
@@ -820,11 +847,13 @@ exports[`gatsby-plugin-sass given stage develop-html when creating webpack confi
                       "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
-                      "loader": "/node_modules/typings-for-css-modules-loader/lib/index.js",
+                      "loader": "@teamsupercell/typings-for-css-modules-loader",
+                      "options": undefined,
+                    },
+                    Object {
+                      "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
-                        "camelCase": true,
                         "modules": true,
-                        "namedExport": true,
                       },
                     },
                     Object {
@@ -876,6 +905,7 @@ exports[`gatsby-plugin-sass given stage develop-html when creating webpack confi
         },
         "plugins": Array [
           "extractText(undefined)",
+          "ignore(/css\\\\.d\\\\.ts$/)",
         ],
       },
     ],
@@ -905,13 +935,15 @@ exports[`gatsby-plugin-sass given stage develop-html when creating webpack confi
                       "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
-                      "loader": "/node_modules/typings-for-css-modules-loader/lib/index.js",
+                      "loader": "@teamsupercell/typings-for-css-modules-loader",
+                      "options": undefined,
+                    },
+                    Object {
+                      "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
-                        "camelCase": true,
                         "importLoaders": 1,
                         "localIdentName": "[name]_[local]___[hash:base64:5]_[emoji:1]",
                         "modules": true,
-                        "namedExport": true,
                       },
                     },
                     Object {
@@ -966,6 +998,7 @@ exports[`gatsby-plugin-sass given stage develop-html when creating webpack confi
         },
         "plugins": Array [
           "extractText(undefined)",
+          "ignore(/css\\\\.d\\\\.ts$/)",
         ],
       },
     ],
@@ -995,11 +1028,13 @@ exports[`gatsby-plugin-sass given stage develop-html when creating webpack confi
                       "loader": "/node_modules/style-loader/index.js",
                     },
                     Object {
-                      "loader": "/node_modules/typings-for-css-modules-loader/lib/index.js",
+                      "loader": "@teamsupercell/typings-for-css-modules-loader",
+                      "options": undefined,
+                    },
+                    Object {
+                      "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
-                        "camelCase": true,
                         "modules": true,
-                        "namedExport": true,
                       },
                     },
                     Object {
@@ -1059,6 +1094,7 @@ exports[`gatsby-plugin-sass given stage develop-html when creating webpack confi
         },
         "plugins": Array [
           "extractText(undefined)",
+          "ignore(/css\\\\.d\\\\.ts$/)",
         ],
       },
     ],

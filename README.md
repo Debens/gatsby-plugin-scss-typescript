@@ -41,11 +41,15 @@ plugins: ['gatsby-plugin-scss-typescript'];
 import * as styles from './styles.module.scss';
 ```
 
-Only files that include the `.module.scss` extensions shall be treated as module files, and hence have typings generated at build time. `.scss` files shall be loaded using the regular [css-loader](https://github.com/webpack-contrib/css-loader).
+Only files that include the `.module.scss` extensions shall be treated as module files, and hence have typings generated at build time. `.scss` files shall be loaded using the regular [css-loader](https://github.com/webpack-contrib/css-loader) with no additional magic.
 
 ## Options
 
 The default gatsby rule loaders are used where possible, see the [gatsby webpack utils](https://github.com/gatsbyjs/gatsby/blob/0deda7b5646b3eb8db1b1873faf13553311c4878/packages/gatsby/src/utils/webpack-utils.js) for more info.
+
+## declartionOptions
+
+The `declarationOptions` key is passed to [typings-for-css-modules-loader](https://github.com/TeamSupercell/typings-for-css-modules-loader#options).
 
 ### cssLoaderOptions
 
@@ -108,24 +112,16 @@ In this case they are describing what the scss will look like once it has been t
 This is what is happening under the surface, when you write:
 
 ```ts
-import * as styles from './styles.module.scss';
+import styles from './styles.module.scss';
 ```
 
 You are importing a js module that can be transpiled from your scss using a [webpack loader](https://webpack.js.org/loaders/).
-
-#### <u>Should I commit these files?</u>
-
-Yes, I recommend that they are committed into your project. These files can be reviewed in PRs like any other file, and are only generated when running `gatsby develop`, [not when running `gatsby build`](#no_files).
-
-This means if they are not committed if someone was to checkout your project for the first time they would either run `gatsby build`, at it wouldn't work due to type errors. Or, they would run `gatsby develop` and be greeted by a large number of new files.
 
 #### <u>Do I need these declaration files?</u>
 
 No.
 
-Well, maybe. You can have type safe css without these declaration files using [typescript-plugin-css-modules](https://github.com/mrmckeb/typescript-plugin-css-modules) in your `tsconfig.json`. However, this is only a development aid and wont throw any errors when actually building your site.
-
-Generated declaration files will throw errors during `gatsby build` assuming all the files have been generated before any new changes to the scss. This is the safest way I know to use gatsby, scss modules and typescript all in one plug(-in) and play manor. I understand if the overload of file generation is too much for some, and is **not** a requirement for using scss and typescript.
+Well, maybe. You can have type safe css without these declaration files using [typescript-plugin-css-modules](https://github.com/mrmckeb/typescript-plugin-css-modules) in your `tsconfig.json`.
 
 For those who prefer to throw caution to the wind, you can use this:
 
@@ -141,13 +137,7 @@ You animal. 🦁
 
 #### <u>I'm not seeing any files being created?</u><a name="no_files"></a>
 
-Firstly make sure your file are suffixed with `.module.scss`, the plugin won't generate declarations for regular `.scss` files by design. This is to give the most power to you!
-
-Also, declaration files aren't generated for all scenarios. This is a development aid plugin, which means the files are only generated in development, not production.
-
-In production the loader is swapped out to improve performance. This means filse will only be generated when you are running `gatsby develop`, but changes to files will be picked up and amended during hot reloading.
-
-Ultimately this can lead to small difference between the `gatsby develop` output and `gatsby build`. This tends to be a bug with [typescript-plugin-css-modules](https://github.com/mrmckeb/typescript-plugin-css-modules).
+Make sure your file are suffixed with `.module.scss`, the plugin won't generate declarations for regular `.scss` files by design. This is to give the most power to you!
 
 #### <u>Do I need any other gatsby plugins to enable scss with my project?</u>
 

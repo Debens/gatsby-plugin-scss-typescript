@@ -24,6 +24,7 @@ const rules = {
 
 const plugins = {
     extractText: args => `extractText(${JSON.stringify(args)})`,
+    ignore: regex => `ignore(${regex})`,
     minifyCss: args => `minifyCss(${JSON.stringify(args)})`,
 };
 
