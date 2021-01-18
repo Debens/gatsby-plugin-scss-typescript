@@ -1,4 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/tslint/config
+import 'core-js/stable';
+
 import { RuleSetLoader } from 'webpack';
 
 export const onCreateWebpackConfig = ({ stage, plugins, rules, actions }, options) => {

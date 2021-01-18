@@ -9,8 +9,6 @@
         "module": "commonjs",
         "moduleResolution": "node",
         "removeComments": false,
-        "noEmitHelpers": true,
-        "importHelpers": true,
         "strict": true,
         "strictNullChecks": false,
         "noUnusedLocals": false,
