@@ -22,7 +22,9 @@ exports[`gatsby-plugin-sass given stage build-html when creating webpack config 
                     Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
-                        "modules": true,
+                        "modules": Object {
+                          "namedExport": false,
+                        },
                       },
                     },
                     Object {
@@ -112,7 +114,9 @@ exports[`gatsby-plugin-sass given stage build-html when creating webpack config 
                       "options": Object {
                         "importLoaders": 1,
                         "localIdentName": "[name]_[local]___[hash:base64:5]_[emoji:1]",
-                        "modules": true,
+                        "modules": Object {
+                          "namedExport": false,
+                        },
                       },
                     },
                     Object {
@@ -203,7 +207,9 @@ exports[`gatsby-plugin-sass given stage build-html when creating webpack config 
                     Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
-                        "modules": true,
+                        "modules": Object {
+                          "namedExport": false,
+                        },
                       },
                     },
                     Object {
@@ -299,7 +305,9 @@ exports[`gatsby-plugin-sass given stage build-javascript when creating webpack c
                     Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
-                        "modules": true,
+                        "modules": Object {
+                          "namedExport": false,
+                        },
                       },
                     },
                     Object {
@@ -389,7 +397,9 @@ exports[`gatsby-plugin-sass given stage build-javascript when creating webpack c
                       "options": Object {
                         "importLoaders": 1,
                         "localIdentName": "[name]_[local]___[hash:base64:5]_[emoji:1]",
-                        "modules": true,
+                        "modules": Object {
+                          "namedExport": false,
+                        },
                       },
                     },
                     Object {
@@ -480,7 +490,9 @@ exports[`gatsby-plugin-sass given stage build-javascript when creating webpack c
                     Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
-                        "modules": true,
+                        "modules": Object {
+                          "namedExport": false,
+                        },
                       },
                     },
                     Object {
@@ -576,7 +588,9 @@ exports[`gatsby-plugin-sass given stage develop when creating webpack config and
                     Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
-                        "modules": true,
+                        "modules": Object {
+                          "namedExport": false,
+                        },
                       },
                     },
                     Object {
@@ -666,7 +680,9 @@ exports[`gatsby-plugin-sass given stage develop when creating webpack config css
                       "options": Object {
                         "importLoaders": 1,
                         "localIdentName": "[name]_[local]___[hash:base64:5]_[emoji:1]",
-                        "modules": true,
+                        "modules": Object {
+                          "namedExport": false,
+                        },
                       },
                     },
                     Object {
@@ -757,7 +773,9 @@ exports[`gatsby-plugin-sass given stage develop when creating webpack config sas
                     Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
-                        "modules": true,
+                        "modules": Object {
+                          "namedExport": false,
+                        },
                       },
                     },
                     Object {
@@ -853,7 +871,9 @@ exports[`gatsby-plugin-sass given stage develop-html when creating webpack confi
                     Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
-                        "modules": true,
+                        "modules": Object {
+                          "namedExport": false,
+                        },
                       },
                     },
                     Object {
@@ -943,7 +963,9 @@ exports[`gatsby-plugin-sass given stage develop-html when creating webpack confi
                       "options": Object {
                         "importLoaders": 1,
                         "localIdentName": "[name]_[local]___[hash:base64:5]_[emoji:1]",
-                        "modules": true,
+                        "modules": Object {
+                          "namedExport": false,
+                        },
                       },
                     },
                     Object {
@@ -1034,7 +1056,9 @@ exports[`gatsby-plugin-sass given stage develop-html when creating webpack confi
                     Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
-                        "modules": true,
+                        "modules": Object {
+                          "namedExport": false,
+                        },
                       },
                     },
                     Object {

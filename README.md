@@ -77,7 +77,7 @@ plugins: [
         options: {
             cssLoaderOptions: {
                 importLoaders: 1,
-                localIdentName: '[name]_[local]___[hash:base64:5]_[emoji:1]',
+                localIdentName: '[name]_[local]___[contenthash:base64:5]_[emoji:1]',
             },
             sassLoaderOptions: {
                 includePaths: [path.resolve(__dirname, './src/styles/scss')],

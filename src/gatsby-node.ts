@@ -1,7 +1,9 @@
 // eslint-disable-next-line @typescript-eslint/tslint/config
 import 'core-js/stable';
 
-import { RuleSetLoader } from 'webpack';
+import { RuleSetUseItem } from 'webpack';
+
+type ObjectRule = Exclude<RuleSetUseItem, string | Function>;
 
 export const onCreateWebpackConfig = ({ stage, plugins, rules, actions }, options) => {
     const { setWebpackConfig } = actions;
@@ -15,15 +17,15 @@ export const onCreateWebpackConfig = ({ stage, plugins, rules, actions }, option
         declarationOptions,
     } = options;
 
-    const typeLoader = {
+    const typeLoader: ObjectRule = {
         loader: '@teamsupercell/typings-for-css-modules-loader',
         options: declarationOptions,
     };
 
-    const useCss: RuleSetLoader[] = rules.css(cssLoaderOptions).use;
-    const useCssModules: RuleSetLoader[] = rules.cssModules(cssLoaderOptions).use;
+    const useCss: ObjectRule[] = rules.css(cssLoaderOptions).use;
+    const useCssModules: ObjectRule[] = rules.cssModules(cssLoaderOptions).use;
 
-    const sassLoaders: RuleSetLoader[] = [
+    const sassLoaders: ObjectRule[] = [
         { loader: 'resolve-url-loader' },
         {
             loader: 'sass-loader',
@@ -34,12 +36,33 @@ export const onCreateWebpackConfig = ({ stage, plugins, rules, actions }, option
         },
     ];
 
-    const isCssLoader = ({ loader }: RuleSetLoader) =>
+    const isCssLoader = ({ loader }: ObjectRule) =>
         !!['/css-loader/', '\\css-loader\\'].find(matcher => loader.includes(matcher));
+
+    /**
+     * https://github.com/TeamSupercell/typings-for-css-modules-loader/blob/master/src/index.js#L64-L66
+     *
+     * TeamSupercell use the locals property in the named exports.
+     *
+     * Sadly this means we have to disable the tree shaking when generating the typings to allow the typings generation.
+     * This wil have no effect on the actual tree-shaking of course
+     */
+    const toDisabledTreeShaking = loader => ({
+        ...loader,
+        options: {
+            ...loader.options,
+            modules: {
+                ...loader.options.modules,
+                namedExport: false,
+            },
+        },
+    });
 
     const css = useCss.concat(sassLoaders);
     const cssModules = useCssModules
-        .flatMap(loader => (isCssLoader(loader) ? [typeLoader, loader] : loader))
+        .flatMap(loader =>
+            isCssLoader(loader) ? [typeLoader, toDisabledTreeShaking(loader)] : loader,
+        )
         .concat(sassLoaders);
 
     switch (stage) {
