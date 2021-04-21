@@ -31,6 +31,9 @@ export const onCreateWebpackConfig = ({ stage, plugins, actions, loaders, rules 
 	});
 	const miniCssLoader: ObjectRule = {
 		loader: MiniCssExtractPlugin.loader,
+		options: {
+			esModule: false,
+	},
 	};
 	const cssLoader: ObjectRule = loaders.css({
 		...cssLoaderOptions,
