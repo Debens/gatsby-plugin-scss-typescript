@@ -1,7 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/tslint/config
 import 'core-js/stable';
-// Minified CSS
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 import { RuleSetUseItem } from 'webpack';
 
 type ObjectRule = Exclude<RuleSetUseItem, string | Function>;
@@ -29,12 +28,6 @@ export const onCreateWebpackConfig = ({ stage, plugins, actions, loaders, rules 
 	const styleLoader: ObjectRule = loaders.style({
 		esModule: false,
 	});
-	const miniCssLoader: ObjectRule = {
-		loader: MiniCssExtractPlugin.loader,
-		options: {
-			esModule: false,
-	},
-	};
 	const cssLoader: ObjectRule = loaders.css({
 		...cssLoaderOptions,
 		modules: {
@@ -52,7 +45,6 @@ export const onCreateWebpackConfig = ({ stage, plugins, actions, loaders, rules 
 
 	const sassLoaders: ObjectRule[] = [
 		styleLoader,
-		miniCssLoader,
 		cssLoader,
 		sassLoader
 	];
@@ -60,7 +52,6 @@ export const onCreateWebpackConfig = ({ stage, plugins, actions, loaders, rules 
 	const typeLoaders: ObjectRule[] = [
 		styleLoader,
 		typeLoader,
-		miniCssLoader,
 		cssLoader,
 		sassLoader
 	];
