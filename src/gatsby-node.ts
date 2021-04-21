@@ -1,12 +1,13 @@
 // eslint-disable-next-line @typescript-eslint/tslint/config
 import 'core-js/stable';
-
+// Minified CSS
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 import { RuleSetUseItem } from 'webpack';
 
 type ObjectRule = Exclude<RuleSetUseItem, string | Function>;
 
 // While `rules` isn't used here, we must have it around for tests
-export const onCreateWebpackConfig = ({ stage, plugins, actions, rules }, options) => {
+export const onCreateWebpackConfig = ({ stage, plugins, actions, loaders, rules }, options) => {
 	const { setWebpackConfig } = actions;
 	const isProduction = !stage.includes('develop');
 
@@ -25,22 +26,22 @@ export const onCreateWebpackConfig = ({ stage, plugins, actions, rules }, option
 			...declarationOptions
 		}
 	};
-	const styleLoader: ObjectRule = {
-		loader: "style-loader",
+	const styleLoader: ObjectRule = loaders.style({
+		esModule: false,
+	});
+	const miniCssLoader: ObjectRule = {
+		loader: MiniCssExtractPlugin.loader,
 		options: {
-			esModule: false,
+				esModule: false,
 		},
 	};
-	const cssLoader: ObjectRule = {
-		loader: "css-loader",
-		options: {
-			...cssLoaderOptions,
-			modules: {
-				exportLocalsConvention: "camelCaseOnly",
-				localIdentName: "[local]"
-			}
+	const cssLoader: ObjectRule = loaders.css({
+		...cssLoaderOptions,
+		modules: {
+			exportLocalsConvention: "camelCaseOnly",
+			localIdentName: "[local]"
 		}
-	};
+	});
 	const sassLoader: ObjectRule = {
 		loader: "sass-loader",
 		options: {
@@ -51,6 +52,7 @@ export const onCreateWebpackConfig = ({ stage, plugins, actions, rules }, option
 
 	const sassLoaders: ObjectRule[] = [
 		styleLoader,
+		miniCssLoader,
 		cssLoader,
 		sassLoader
 	];
@@ -58,6 +60,7 @@ export const onCreateWebpackConfig = ({ stage, plugins, actions, rules }, option
 	const typeLoaders: ObjectRule[] = [
 		styleLoader,
 		typeLoader,
+		miniCssLoader,
 		cssLoader,
 		sassLoader
 	];
