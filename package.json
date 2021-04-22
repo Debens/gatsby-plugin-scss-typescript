@@ -35,16 +35,14 @@
         "lint:staged": "lint-staged"
     },
     "peerDependencies": {
-        "css-loader": "*",
         "gatsby": "^3.0.0",
         "sass": "^1.0.0",
-        "style-loader": "*",
         "webpack": "^5.0.0"
     },
     "dependencies": {
         "core-js": "^3.10.2",
         "dts-css-modules-loader": "^1.2.1",
-        "sass-loader": "^10.1.1"
+        "sass-loader": "^11.0.1"
     },
     "devDependencies": {
         "@babel/core": "^7.13.16",
@@ -58,7 +56,6 @@
         "@typescript-eslint/parser": "^4.22.0",
         "babel-loader": "^8.2.2",
         "commitlint": "^12.1.1",
-        "css-loader": "^5.2.4",
         "eslint": "^7.24.0",
         "eslint-config-prettier": "^8.2.0",
         "eslint-plugin-jest": "^24.3.5",
@@ -67,7 +64,6 @@
         "lint-staged": "^10.5.4",
         "prettier": "^2.2.1",
         "standard-version": "^9.2.0",
-        "style-loader": "^2.0.0",
         "ts-jest": "^26.5.5",
         "ts-loader": "^9.0.2",
         "tslint": "^6.1.3",
