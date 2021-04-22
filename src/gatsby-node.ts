@@ -21,13 +21,6 @@ export const onCreateWebpackConfig = ({ stage, plugins, actions, rules }, option
 	const useCss: ObjectRule[] = rules.css(cssLoaderOptions).use;
 	const useCssModules: ObjectRule[] = rules.cssModules(cssLoaderOptions).use;
 
-	const typeLoader: ObjectRule = {
-		loader: "dts-css-modules-loader",
-		options: {
-			namedExport: true,
-			...declarationOptions
-		}
-	};
 	const sassLoader: ObjectRule = {
 		loader: "sass-loader",
 		options: {
@@ -35,15 +28,16 @@ export const onCreateWebpackConfig = ({ stage, plugins, actions, rules }, option
 			...sassLoaderOptions
 		},
 	};
+	const typeLoader: ObjectRule = {
+		loader: "dts-css-modules-loader",
+		options: {
+			namedExport: true,
+			...declarationOptions
+		}
+	};
 
-	const sassLoaders: ObjectRule[] = useCss.concat([
-		sassLoader
-	]);
-
-	const typeLoaders: ObjectRule[] = useCssModules.concat([
-		typeLoader,
-		sassLoader
-	]);
+	const sassLoaders = [ ...useCss, sassLoader ];
+	const typeLoaders = [ typeLoader, ...useCssModules, sassLoader ];
 
 	setWebpackConfig({
 		module: {
