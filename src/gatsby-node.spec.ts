@@ -6,18 +6,19 @@ const rules = {
         use: [
             { loader: require.resolve('style-loader') },
             { loader: require.resolve('css-loader'), options: args },
-            { loader: require.resolve('postcss-loader') },
+            { loader: require.resolve('sass-loader') },
         ],
     }),
     cssModules: args => ({
         test: /\.module\.css$/,
         use: [
             { loader: require.resolve('style-loader') },
+            { loader: require.resolve('dts-css-modules-loader') },
             {
                 loader: require.resolve('css-loader'),
                 options: { ...args, modules: true },
             },
-            { loader: require.resolve('postcss-loader') },
+            { loader: require.resolve('sass-loader') },
         ],
     }),
 };

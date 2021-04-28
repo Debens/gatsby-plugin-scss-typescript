@@ -13,25 +13,25 @@ exports[`gatsby-plugin-sass given stage build-html when creating webpack config 
                   "test": /\\\\\\.module\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/node_modules/style-loader/index.js",
+                      "loader": "dts-css-modules-loader",
+                      "options": Object {
+                        "namedExport": true,
+                      },
                     },
                     Object {
-                      "loader": "@teamsupercell/typings-for-css-modules-loader",
-                      "options": undefined,
+                      "loader": "/node_modules/style-loader/dist/cjs.js",
+                    },
+                    Object {
+                      "loader": "/node_modules/dts-css-modules-loader/index.js",
                     },
                     Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
-                        "modules": Object {
-                          "namedExport": false,
-                        },
+                        "modules": true,
                       },
                     },
                     Object {
-                      "loader": "/node_modules/postcss-loader/src/index.js",
-                    },
-                    Object {
-                      "loader": "resolve-url-loader",
+                      "loader": "/node_modules/sass-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "sass-loader",
@@ -45,17 +45,14 @@ exports[`gatsby-plugin-sass given stage build-html when creating webpack config 
                   "test": /\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": undefined,
                     },
                     Object {
-                      "loader": "/node_modules/postcss-loader/src/index.js",
-                    },
-                    Object {
-                      "loader": "resolve-url-loader",
+                      "loader": "/node_modules/sass-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "sass-loader",
@@ -103,27 +100,27 @@ exports[`gatsby-plugin-sass given stage build-html when creating webpack config 
                   "test": /\\\\\\.module\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/node_modules/style-loader/index.js",
+                      "loader": "dts-css-modules-loader",
+                      "options": Object {
+                        "namedExport": true,
+                      },
                     },
                     Object {
-                      "loader": "@teamsupercell/typings-for-css-modules-loader",
-                      "options": undefined,
+                      "loader": "/node_modules/style-loader/dist/cjs.js",
+                    },
+                    Object {
+                      "loader": "/node_modules/dts-css-modules-loader/index.js",
                     },
                     Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
                         "importLoaders": 1,
                         "localIdentName": "[name]_[local]___[hash:base64:5]_[emoji:1]",
-                        "modules": Object {
-                          "namedExport": false,
-                        },
+                        "modules": true,
                       },
                     },
                     Object {
-                      "loader": "/node_modules/postcss-loader/src/index.js",
-                    },
-                    Object {
-                      "loader": "resolve-url-loader",
+                      "loader": "/node_modules/sass-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "sass-loader",
@@ -137,7 +134,7 @@ exports[`gatsby-plugin-sass given stage build-html when creating webpack config 
                   "test": /\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
@@ -147,10 +144,7 @@ exports[`gatsby-plugin-sass given stage build-html when creating webpack config 
                       },
                     },
                     Object {
-                      "loader": "/node_modules/postcss-loader/src/index.js",
-                    },
-                    Object {
-                      "loader": "resolve-url-loader",
+                      "loader": "/node_modules/sass-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "sass-loader",
@@ -198,25 +192,25 @@ exports[`gatsby-plugin-sass given stage build-html when creating webpack config 
                   "test": /\\\\\\.module\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/node_modules/style-loader/index.js",
+                      "loader": "dts-css-modules-loader",
+                      "options": Object {
+                        "namedExport": true,
+                      },
                     },
                     Object {
-                      "loader": "@teamsupercell/typings-for-css-modules-loader",
-                      "options": undefined,
+                      "loader": "/node_modules/style-loader/dist/cjs.js",
+                    },
+                    Object {
+                      "loader": "/node_modules/dts-css-modules-loader/index.js",
                     },
                     Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
-                        "modules": Object {
-                          "namedExport": false,
-                        },
+                        "modules": true,
                       },
                     },
                     Object {
-                      "loader": "/node_modules/postcss-loader/src/index.js",
-                    },
-                    Object {
-                      "loader": "resolve-url-loader",
+                      "loader": "/node_modules/sass-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "sass-loader",
@@ -234,17 +228,14 @@ exports[`gatsby-plugin-sass given stage build-html when creating webpack config 
                   "test": /\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": undefined,
                     },
                     Object {
-                      "loader": "/node_modules/postcss-loader/src/index.js",
-                    },
-                    Object {
-                      "loader": "resolve-url-loader",
+                      "loader": "/node_modules/sass-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "sass-loader",
@@ -296,25 +287,25 @@ exports[`gatsby-plugin-sass given stage build-javascript when creating webpack c
                   "test": /\\\\\\.module\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/node_modules/style-loader/index.js",
+                      "loader": "dts-css-modules-loader",
+                      "options": Object {
+                        "namedExport": true,
+                      },
                     },
                     Object {
-                      "loader": "@teamsupercell/typings-for-css-modules-loader",
-                      "options": undefined,
+                      "loader": "/node_modules/style-loader/dist/cjs.js",
+                    },
+                    Object {
+                      "loader": "/node_modules/dts-css-modules-loader/index.js",
                     },
                     Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
-                        "modules": Object {
-                          "namedExport": false,
-                        },
+                        "modules": true,
                       },
                     },
                     Object {
-                      "loader": "/node_modules/postcss-loader/src/index.js",
-                    },
-                    Object {
-                      "loader": "resolve-url-loader",
+                      "loader": "/node_modules/sass-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "sass-loader",
@@ -328,17 +319,14 @@ exports[`gatsby-plugin-sass given stage build-javascript when creating webpack c
                   "test": /\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": undefined,
                     },
                     Object {
-                      "loader": "/node_modules/postcss-loader/src/index.js",
-                    },
-                    Object {
-                      "loader": "resolve-url-loader",
+                      "loader": "/node_modules/sass-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "sass-loader",
@@ -386,27 +374,27 @@ exports[`gatsby-plugin-sass given stage build-javascript when creating webpack c
                   "test": /\\\\\\.module\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/node_modules/style-loader/index.js",
+                      "loader": "dts-css-modules-loader",
+                      "options": Object {
+                        "namedExport": true,
+                      },
                     },
                     Object {
-                      "loader": "@teamsupercell/typings-for-css-modules-loader",
-                      "options": undefined,
+                      "loader": "/node_modules/style-loader/dist/cjs.js",
+                    },
+                    Object {
+                      "loader": "/node_modules/dts-css-modules-loader/index.js",
                     },
                     Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
                         "importLoaders": 1,
                         "localIdentName": "[name]_[local]___[hash:base64:5]_[emoji:1]",
-                        "modules": Object {
-                          "namedExport": false,
-                        },
+                        "modules": true,
                       },
                     },
                     Object {
-                      "loader": "/node_modules/postcss-loader/src/index.js",
-                    },
-                    Object {
-                      "loader": "resolve-url-loader",
+                      "loader": "/node_modules/sass-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "sass-loader",
@@ -420,7 +408,7 @@ exports[`gatsby-plugin-sass given stage build-javascript when creating webpack c
                   "test": /\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
@@ -430,10 +418,7 @@ exports[`gatsby-plugin-sass given stage build-javascript when creating webpack c
                       },
                     },
                     Object {
-                      "loader": "/node_modules/postcss-loader/src/index.js",
-                    },
-                    Object {
-                      "loader": "resolve-url-loader",
+                      "loader": "/node_modules/sass-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "sass-loader",
@@ -481,25 +466,25 @@ exports[`gatsby-plugin-sass given stage build-javascript when creating webpack c
                   "test": /\\\\\\.module\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/node_modules/style-loader/index.js",
+                      "loader": "dts-css-modules-loader",
+                      "options": Object {
+                        "namedExport": true,
+                      },
                     },
                     Object {
-                      "loader": "@teamsupercell/typings-for-css-modules-loader",
-                      "options": undefined,
+                      "loader": "/node_modules/style-loader/dist/cjs.js",
+                    },
+                    Object {
+                      "loader": "/node_modules/dts-css-modules-loader/index.js",
                     },
                     Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
-                        "modules": Object {
-                          "namedExport": false,
-                        },
+                        "modules": true,
                       },
                     },
                     Object {
-                      "loader": "/node_modules/postcss-loader/src/index.js",
-                    },
-                    Object {
-                      "loader": "resolve-url-loader",
+                      "loader": "/node_modules/sass-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "sass-loader",
@@ -517,17 +502,14 @@ exports[`gatsby-plugin-sass given stage build-javascript when creating webpack c
                   "test": /\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": undefined,
                     },
                     Object {
-                      "loader": "/node_modules/postcss-loader/src/index.js",
-                    },
-                    Object {
-                      "loader": "resolve-url-loader",
+                      "loader": "/node_modules/sass-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "sass-loader",
@@ -579,25 +561,25 @@ exports[`gatsby-plugin-sass given stage develop when creating webpack config and
                   "test": /\\\\\\.module\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/node_modules/style-loader/index.js",
+                      "loader": "dts-css-modules-loader",
+                      "options": Object {
+                        "namedExport": true,
+                      },
                     },
                     Object {
-                      "loader": "@teamsupercell/typings-for-css-modules-loader",
-                      "options": undefined,
+                      "loader": "/node_modules/style-loader/dist/cjs.js",
+                    },
+                    Object {
+                      "loader": "/node_modules/dts-css-modules-loader/index.js",
                     },
                     Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
-                        "modules": Object {
-                          "namedExport": false,
-                        },
+                        "modules": true,
                       },
                     },
                     Object {
-                      "loader": "/node_modules/postcss-loader/src/index.js",
-                    },
-                    Object {
-                      "loader": "resolve-url-loader",
+                      "loader": "/node_modules/sass-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "sass-loader",
@@ -611,17 +593,14 @@ exports[`gatsby-plugin-sass given stage develop when creating webpack config and
                   "test": /\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": undefined,
                     },
                     Object {
-                      "loader": "/node_modules/postcss-loader/src/index.js",
-                    },
-                    Object {
-                      "loader": "resolve-url-loader",
+                      "loader": "/node_modules/sass-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "sass-loader",
@@ -669,27 +648,27 @@ exports[`gatsby-plugin-sass given stage develop when creating webpack config css
                   "test": /\\\\\\.module\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/node_modules/style-loader/index.js",
+                      "loader": "dts-css-modules-loader",
+                      "options": Object {
+                        "namedExport": true,
+                      },
                     },
                     Object {
-                      "loader": "@teamsupercell/typings-for-css-modules-loader",
-                      "options": undefined,
+                      "loader": "/node_modules/style-loader/dist/cjs.js",
+                    },
+                    Object {
+                      "loader": "/node_modules/dts-css-modules-loader/index.js",
                     },
                     Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
                         "importLoaders": 1,
                         "localIdentName": "[name]_[local]___[hash:base64:5]_[emoji:1]",
-                        "modules": Object {
-                          "namedExport": false,
-                        },
+                        "modules": true,
                       },
                     },
                     Object {
-                      "loader": "/node_modules/postcss-loader/src/index.js",
-                    },
-                    Object {
-                      "loader": "resolve-url-loader",
+                      "loader": "/node_modules/sass-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "sass-loader",
@@ -703,7 +682,7 @@ exports[`gatsby-plugin-sass given stage develop when creating webpack config css
                   "test": /\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
@@ -713,10 +692,7 @@ exports[`gatsby-plugin-sass given stage develop when creating webpack config css
                       },
                     },
                     Object {
-                      "loader": "/node_modules/postcss-loader/src/index.js",
-                    },
-                    Object {
-                      "loader": "resolve-url-loader",
+                      "loader": "/node_modules/sass-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "sass-loader",
@@ -764,25 +740,25 @@ exports[`gatsby-plugin-sass given stage develop when creating webpack config sas
                   "test": /\\\\\\.module\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/node_modules/style-loader/index.js",
+                      "loader": "dts-css-modules-loader",
+                      "options": Object {
+                        "namedExport": true,
+                      },
                     },
                     Object {
-                      "loader": "@teamsupercell/typings-for-css-modules-loader",
-                      "options": undefined,
+                      "loader": "/node_modules/style-loader/dist/cjs.js",
+                    },
+                    Object {
+                      "loader": "/node_modules/dts-css-modules-loader/index.js",
                     },
                     Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
-                        "modules": Object {
-                          "namedExport": false,
-                        },
+                        "modules": true,
                       },
                     },
                     Object {
-                      "loader": "/node_modules/postcss-loader/src/index.js",
-                    },
-                    Object {
-                      "loader": "resolve-url-loader",
+                      "loader": "/node_modules/sass-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "sass-loader",
@@ -800,17 +776,14 @@ exports[`gatsby-plugin-sass given stage develop when creating webpack config sas
                   "test": /\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": undefined,
                     },
                     Object {
-                      "loader": "/node_modules/postcss-loader/src/index.js",
-                    },
-                    Object {
-                      "loader": "resolve-url-loader",
+                      "loader": "/node_modules/sass-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "sass-loader",
@@ -862,25 +835,25 @@ exports[`gatsby-plugin-sass given stage develop-html when creating webpack confi
                   "test": /\\\\\\.module\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/node_modules/style-loader/index.js",
+                      "loader": "dts-css-modules-loader",
+                      "options": Object {
+                        "namedExport": true,
+                      },
                     },
                     Object {
-                      "loader": "@teamsupercell/typings-for-css-modules-loader",
-                      "options": undefined,
+                      "loader": "/node_modules/style-loader/dist/cjs.js",
+                    },
+                    Object {
+                      "loader": "/node_modules/dts-css-modules-loader/index.js",
                     },
                     Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
-                        "modules": Object {
-                          "namedExport": false,
-                        },
+                        "modules": true,
                       },
                     },
                     Object {
-                      "loader": "/node_modules/postcss-loader/src/index.js",
-                    },
-                    Object {
-                      "loader": "resolve-url-loader",
+                      "loader": "/node_modules/sass-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "sass-loader",
@@ -894,17 +867,14 @@ exports[`gatsby-plugin-sass given stage develop-html when creating webpack confi
                   "test": /\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": undefined,
                     },
                     Object {
-                      "loader": "/node_modules/postcss-loader/src/index.js",
-                    },
-                    Object {
-                      "loader": "resolve-url-loader",
+                      "loader": "/node_modules/sass-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "sass-loader",
@@ -952,27 +922,27 @@ exports[`gatsby-plugin-sass given stage develop-html when creating webpack confi
                   "test": /\\\\\\.module\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/node_modules/style-loader/index.js",
+                      "loader": "dts-css-modules-loader",
+                      "options": Object {
+                        "namedExport": true,
+                      },
                     },
                     Object {
-                      "loader": "@teamsupercell/typings-for-css-modules-loader",
-                      "options": undefined,
+                      "loader": "/node_modules/style-loader/dist/cjs.js",
+                    },
+                    Object {
+                      "loader": "/node_modules/dts-css-modules-loader/index.js",
                     },
                     Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
                         "importLoaders": 1,
                         "localIdentName": "[name]_[local]___[hash:base64:5]_[emoji:1]",
-                        "modules": Object {
-                          "namedExport": false,
-                        },
+                        "modules": true,
                       },
                     },
                     Object {
-                      "loader": "/node_modules/postcss-loader/src/index.js",
-                    },
-                    Object {
-                      "loader": "resolve-url-loader",
+                      "loader": "/node_modules/sass-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "sass-loader",
@@ -986,7 +956,7 @@ exports[`gatsby-plugin-sass given stage develop-html when creating webpack confi
                   "test": /\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
@@ -996,10 +966,7 @@ exports[`gatsby-plugin-sass given stage develop-html when creating webpack confi
                       },
                     },
                     Object {
-                      "loader": "/node_modules/postcss-loader/src/index.js",
-                    },
-                    Object {
-                      "loader": "resolve-url-loader",
+                      "loader": "/node_modules/sass-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "sass-loader",
@@ -1047,25 +1014,25 @@ exports[`gatsby-plugin-sass given stage develop-html when creating webpack confi
                   "test": /\\\\\\.module\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/node_modules/style-loader/index.js",
+                      "loader": "dts-css-modules-loader",
+                      "options": Object {
+                        "namedExport": true,
+                      },
                     },
                     Object {
-                      "loader": "@teamsupercell/typings-for-css-modules-loader",
-                      "options": undefined,
+                      "loader": "/node_modules/style-loader/dist/cjs.js",
+                    },
+                    Object {
+                      "loader": "/node_modules/dts-css-modules-loader/index.js",
                     },
                     Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": Object {
-                        "modules": Object {
-                          "namedExport": false,
-                        },
+                        "modules": true,
                       },
                     },
                     Object {
-                      "loader": "/node_modules/postcss-loader/src/index.js",
-                    },
-                    Object {
-                      "loader": "resolve-url-loader",
+                      "loader": "/node_modules/sass-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "sass-loader",
@@ -1083,17 +1050,14 @@ exports[`gatsby-plugin-sass given stage develop-html when creating webpack confi
                   "test": /\\\\\\.s\\(a\\|c\\)ss\\$/,
                   "use": Array [
                     Object {
-                      "loader": "/node_modules/style-loader/index.js",
+                      "loader": "/node_modules/style-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "/node_modules/css-loader/dist/cjs.js",
                       "options": undefined,
                     },
                     Object {
-                      "loader": "/node_modules/postcss-loader/src/index.js",
-                    },
-                    Object {
-                      "loader": "resolve-url-loader",
+                      "loader": "/node_modules/sass-loader/dist/cjs.js",
                     },
                     Object {
                       "loader": "sass-loader",
