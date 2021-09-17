@@ -8,3 +8,5 @@ yarn-error.log
 coverage/
 
 gatsby-node.js
+
+.DS_Store

@@ -132,7 +132,7 @@ workflows:
                       - publish_alpha
                   filters:
                       branches:
-                          only: master
+                          only: /release\/.*/
             - publish:
                   requires:
                       - publish_approval
